@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIR One Real Estate</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/banner.css" />
+    <link rel="stylesheet" href="/assets/css/broker.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 bg-(--primary) z-100">
+      <div class="container mx-auto px-4 flex justify-between py-5">
+        <a href="/">
+          <img class="h-7 md:h-12" src="/assets/img/logo.svg" alt="" />
+        </a>
+        <nav class="hidden md:flex gap-8 text-[16px]">
+          <a class="text-gradient p-2" href="/">Home</a>
+          <a class="text-gradient p-2" href="/team.html">Our Team</a>
+          <a class="text-gradient p-2" href="/partners.html">Partners</a>
+          <a class="text-gradient p-2" href="/documents.html">Documents</a>
+          <a
+            class="text-gradient p-2 border-b border-b-[#F8C4B8]"
+            href="/contacts.html"
+            >Contacts</a
+          >
+        </nav>
+        <button class="block md:hidden cursor-pointer" id="burger">
+          <img src="/assets/img/burger.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          Contacts
+        </h3>
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-7">
+          <picture class="md:max-w-1/2">
+            <source
+              media="(min-width: 769px)"
+              srcset="/assets/img/contacts.webp"
+            />
+            <img
+              class="rounded-[12px]"
+              src="/assets/img/contacts-mobile.webp"
+              alt=""
+            />
+          </picture>
+          <div class="w-full h-fit flex flex-col gap-5 md:gap-x-11 md:gap-y-5">
+            <a
+              class="text-[16px] md:text-[20px] flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="mailto:Info@elstate.ae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-6" src="/assets/img/contacts/mail.svg" alt="" />
+              Info@elstate.ae
+            </a>
+            <a
+              class="text-[16px] md:text-[20px] flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:+971522749765"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-6" src="/assets/img/contacts/phone.svg" alt="" />
+              +971-52-274-9765
+            </a>
+            <a
+              class="text-[16px] md:text-[20px] flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="https://maps.app.goo.gl/iHEPS3NBpUZEywFVA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-6" src="/assets/img/contacts/map.svg" alt="" />
+              Office no- 2012 Business Bay Dubai, UAE
+            </a>
+            <p class="text-[16px] md:text-[20px] flex gap-3 items-center">
+              <img class="h-6" src="/assets/img/contacts/time.svg" alt="" />
+              Mon — Fri: 9:00 AM – 6:00 PM
+            </p>
+            <div class="flex justify-end md:justify-start items-center gap-4 md:gap-5">
+              <a class="hover:opacity-70 transition-all duration-300" href="#">
+                <img
+                  class="h-10"
+                  src="/assets/img/socials/yt.svg"
+                  alt="YouTube"
+                />
+              </a>
+              <a class="hover:opacity-70 transition-all duration-300" href="#">
+                <img
+                  class="h-10"
+                  src="/assets/img/socials/inst.svg"
+                  alt="Instagram"
+                />
+              </a>
+              <a class="hover:opacity-70 transition-all duration-300" href="#">
+                <img
+                  class="h-10"
+                  src="/assets/img/socials/linkedin.svg"
+                  alt="LinkedIn"
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="mt-9 md:mt-12 bg-(--secondary) pt-4 md:pt-11 pb-7 md:pb-15 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <!-- BG Logo -->
+        <img
+          class="pointer-events-none absolute -left-20 top-0 h-full"
+          src="/assets/img/logo-transparent.svg"
+          alt=""
+        />
+        <!-- Socials + Logo -->
+        <div class="flex justify-between items-start gap-10">
+          <div class="flex items-center gap-4 md:gap-5">
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+            </a>
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/inst.svg"
+                alt="Instagram"
+              />
+            </a>
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+          <a href="/">
+            <img class="h-10 md:h-[68px]" src="/assets/img/logo.svg" alt="" />
+          </a>
+        </div>
+        <!-- Nav + Contacts -->
+        <div
+          class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
+        >
+          <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
+            <a class="hover:text-[#f4beb2] transition-all duration-300" href="/"
+              >Home
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/team.html"
+              >Our Team
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/partners.html"
+              >Partners
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/documents.html"
+              >Documents
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/contacts.html"
+              >Contacts
+            </a>
+          </nav>
+          <div
+            class="h-fit flex flex-col md:flex-row gap-5 md:gap-x-11 md:gap-y-5 md:justify-end flex-wrap max-w-[212px] md:max-w-none"
+          >
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="mailto:Info@elstate.ae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/mail.svg" alt="" />
+              Info@elstate.ae
+            </a>
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:+971522749765"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/phone.svg" alt="" />
+              +971-52-274-9765
+            </a>
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="https://maps.app.goo.gl/iHEPS3NBpUZEywFVA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/map.svg" alt="" />
+              Office no- 2012 Business Bay Dubai, UAE
+            </a>
+          </div>
+        </div>
+        <!-- Company -->
+        <p class="mt-20 md:mt-2.5 text-right">
+          Copyright © 2025-2026 Inside Dubai Estate. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Overlay + Burger -->
+    <div
+      id="burger-overlay"
+      class="fixed hidden inset-0 backdrop-blur-xs z-101"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-(--secondary) z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[14px] md:text-[20px]"
+    >
+      <a class="px-4" href="/">
+        <img class="h-7" src="assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="grow flex flex-col">
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/team.html"
+        >
+          Our Team
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/partners.html"
+        >
+          Partners
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/documents.html"
+        >
+          Documents
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/contacts.html"
+        >
+          Contacts
+        </a>
+      </nav>
+    </section>
+
+    <script src="/assets/js/burger.js"></script>
+  </body>
+</html>
