@@ -1,5 +1,6 @@
 @import url(normalize.css);
 @import url(fonts.css);
+@import url(gradient.css);
 
 :root {
   --primary: #00041a;
@@ -20,31 +21,7 @@ html {
   line-height: 1.2 !important;
 }
 
-.text-gradient {
-  background-image: linear-gradient(180deg, var(--gradient));
+.fullbody {
 
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  height: fit-content;
-
-  transition: all 0.3s ease-in;
-}
-.text-gradient:hover {
-  opacity: 70%;
 }
 
-.bg-gradient {
-  background: linear-gradient(180deg, var(--gradient));
-  transition: all 0.3s ease;
-}
-.bg-gradient:hover {
-  opacity: 85%;
-}
-
-.border-gradient {
-  border: 1px solid transparent;
-  background: linear-gradient(#00041a, #00041a) padding-box,
-    linear-gradient(135deg, var(--borderGradient)) border-box;
-}
