@@ -1,0 +1,48 @@
+@import url(nebo.css);
+
+.banner {
+  --nb-w: 385px !important;
+  --nb-h: 38px !important;
+  --nb-r: 12px !important;
+}
+
+@media (width <= 768px) {
+  .banner {
+    --nb-w: 227px !important;
+    --nb-h: 16px !important;
+  }
+}
+
+.banner-wrapper::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+
+.banner-wrapper::before {
+  background: linear-gradient(
+    to top,
+    rgba(0, 6, 36, 0.9),
+    rgba(20, 17, 54, 0.5),
+    transparent,
+    transparent,
+    rgba(20, 17, 54, 0.05),
+    rgba(0, 6, 36, 0.6)
+  );
+}
+
+@media (width <= 768px) {
+  .banner-wrapper::before {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 6, 36, 0.9),
+      rgba(20, 17, 54, 0.5),
+      transparent
+    );
+  }
+}

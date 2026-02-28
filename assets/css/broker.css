@@ -1,0 +1,19 @@
+.broker-wrapper::before {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.broker-wrapper::before {
+  background: linear-gradient(
+    to top,
+    rgba(0, 6, 36, 1),
+    rgba(20, 17, 54, 0.05)
+  );
+}

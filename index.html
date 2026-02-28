@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIR One Real Estate</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/banner.css" />
+    <link rel="stylesheet" href="/assets/css/broker.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 bg-(--primary) z-100">
+      <div class="container mx-auto px-4 flex justify-between py-5">
+        <a href="/">
+          <img class="h-7 md:h-12" src="/assets/img/logo.svg" alt="" />
+        </a>
+        <nav class="hidden md:flex gap-8 text-[16px]">
+          <a class="text-gradient p-2 border-b border-b-[#F8C4B8]" href="/"
+            >Home</a
+          >
+          <a class="text-gradient p-2" href="/team.html">Our Team</a>
+          <a class="text-gradient p-2" href="/partners.html">Partners</a>
+          <a class="text-gradient p-2" href="/documents.html">Documents</a>
+          <a class="text-gradient p-2" href="/contacts.html">Contacts</a>
+        </nav>
+        <button class="block md:hidden cursor-pointer" id="burger">
+          <img src="/assets/img/burger.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Banner -->
+      <section class="container mx-auto px-4">
+        <div
+          class="banner-wrapper rounded-[12px] relative w-full h-[287px] md:h-[605px] overflow-hidden"
+        >
+          <picture
+            class="w-full h-full relative banner nebo nebo--bl rounded-[12px] object-cover object-right"
+          >
+            <source
+              media="(min-width: 769px)"
+              srcset="/assets/img/banner.webp"
+            />
+            <img
+              class="w-full h-full relative banner nebo nebo--bl rounded-[12px] object-cover object-right"
+              src="/assets/img/banner-mobile.webp"
+              alt=""
+            />
+          </picture>
+          <div
+            class="z-2 absolute top-6 md:top-auto md:bottom-[100px] inset-x-3 md:inset-x-8 max-w-[630px]"
+          >
+            <h1 class="text-[20px] md:text-[40px] mb-1.5 md:mb-5 font-medium">
+              AIR One Real Estate LLC SOC
+            </h1>
+            <h2 class="text-[16px] md:text-[28px] mb-3">
+              Boutique real estate agency in Dubai
+            </h2>
+            <p class="text-[12px] md:text-[16px]">
+              We create a trusted environment for our clients by combining
+              professional brokerage expertise, a system-driven approach, and
+              access to the best real estate investment opportunities in the UAE
+              market.
+            </p>
+          </div>
+          <a
+            class="z-2 absolute left-0 bottom-0 flex justify-center items-center text-center bg-gradient text-[#000624] py-2 md:py-3 text-[16px] md:text-[24px] rounded-[8px] w-[246px] md:w-[400px]"
+            href="/contacts.html"
+          >
+            Contact Us
+          </a>
+        </div>
+      </section>
+      <!-- About -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          About Company
+        </h3>
+        <div
+          class="flex flex-col lg:flex-row gap-4 md:gap-8 lg:gap-20 md:justify-between mb-6 md:mb-12"
+        >
+          <div class="flex flex-col gap-4 md:gap-5 items-start">
+            <p class="text-[14px] md:text-[16px]">
+              AIR One Real Estate LLC SOC is a licensed boutique real estate
+              agency based in Dubai, operating within a structured and compliant
+              framework. We specialize in premium residential properties,
+              working with both investors and end-users who value transparency,
+              expertise, and long-term partnership.
+            </p>
+            <p class="text-[14px] md:text-[16px]">
+              Our approach is built around a clear ecosystem: experienced
+              brokers, internal systems, verified partners, and strong media
+              presence. We combine market analytics, structured processes, and
+              personal advisory to deliver secure, well-informed property
+              decisions. At AIR One, real estate is not just transactions — it
+              is a managed, professional environment designed to protect and
+              grow our clients’ investments.
+            </p>
+          </div>
+          <div
+            class="shrink-0 grid grid-cols-2 gap-x-3 md:gap-y-6 md:gap-x-5 gap-y-7 h-fit"
+          >
+            <div class="flex flex-col gap-2 md:gap-4 h-fit">
+              <span
+                class="text-[32px] md:text-[40px] text-gradient font-medium"
+              >
+                250+
+              </span>
+              <p class="text-[14px] md:text-[16px]">Closed Transactions</p>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-4 h-fit">
+              <span
+                class="text-[32px] md:text-[40px] text-gradient font-medium"
+              >
+                $180M+
+              </span>
+              <p class="text-[14px] md:text-[16px]">Property Value Sold</p>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-4 h-fit">
+              <span
+                class="text-[32px] md:text-[40px] text-gradient font-medium"
+              >
+                92%
+              </span>
+              <p class="text-[14px] md:text-[16px]">Client Referral Rate</p>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-4 h-fit">
+              <span
+                class="text-[32px] md:text-[40px] text-gradient font-medium"
+              >
+                15+
+              </span>
+              <p class="text-[14px] md:text-[16px]">
+                Verified Developer Partners
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex flex-col md:flex-row gap-6 md:gap-7 flex-wrap lg:flex-nowrap"
+        >
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 rounded-[8px] border-gradient"
+          >
+            <img class="h-12 md:h-20" src="/assets/img/about/1.svg" alt="" />
+            <p class="text-[14px] md:text-[16px]">
+              Our strength is our brokers. Each specialist represents the
+              company personally, building long-term client relationships based
+              on trust, transparency, and results.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 rounded-[8px] border-gradient"
+          >
+            <img class="h-12 md:h-20" src="/assets/img/about/2.svg" alt="" />
+            <p class="text-[14px] md:text-[16px]">
+              We combine deep market knowledge, real transaction experience, and
+              a strong understanding of Dubai’s market to guide clients
+              confidently at every stage.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 rounded-[8px] border-gradient"
+          >
+            <img class="h-12 md:h-20" src="/assets/img/about/3.svg" alt="" />
+            <p class="text-[14px] md:text-[16px]">
+              AIR One operates on structured internal processes, verified
+              documentation, and clear workflows — ensuring consistency,
+              compliance, and reliability.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Our Team -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          Our Team
+        </h3>
+        <h4 class="text-[20px] md:text-[28px] mb-4 md:mb-6">Top Brokers</h4>
+        <div class="flex flex-col gap-4 w-full overflow-x-auto">
+          <div
+            class="flex flex-row gap-4 w-max lg:grid lg:grid-cols-4 lg:w-full pb-2"
+          >
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="flex justify-center items-center mt-5 md:mt-10 text-center bg-gradient text-[#000624] py-2 md:py-3 text-[16px] md:text-[24px] rounded-[8px] w-full sm:w-1/2 md:w-[400px]"
+          href="/team.html"
+          >View full team</a
+        >
+      </section>
+      <!-- Partners -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          Partners
+        </h3>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-3 gap-y-4 md:gap-x-7 md:gap-y-8"
+        >
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/1.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/2.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/3.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/4.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/5.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/6.svg" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="mt-9 md:mt-12 bg-(--secondary) pt-4 md:pt-11 pb-7 md:pb-15 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <!-- BG Logo -->
+        <img
+          class="pointer-events-none absolute -left-20 top-0 h-full"
+          src="/assets/img/logo-transparent.svg"
+          alt=""
+        />
+        <!-- Socials + Logo -->
+        <div class="flex justify-between items-start gap-10">
+          <div class="flex items-center gap-4 md:gap-5">
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+            </a>
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/inst.svg"
+                alt="Instagram"
+              />
+            </a>
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+          <a href="/">
+            <img class="h-10 md:h-[68px]" src="/assets/img/logo.svg" alt="" />
+          </a>
+        </div>
+        <!-- Nav + Contacts -->
+        <div
+          class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
+        >
+          <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
+            <a class="hover:text-[#f4beb2] transition-all duration-300" href="/"
+              >Home
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/team.html"
+              >Our Team
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/partners.html"
+              >Partners
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/documents.html"
+              >Documents
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/contacts.html"
+              >Contacts
+            </a>
+          </nav>
+          <div
+            class="h-fit flex flex-col md:flex-row gap-5 md:gap-x-11 md:gap-y-5 md:justify-end flex-wrap max-w-[212px] md:max-w-none"
+          >
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="mailto:Info@elstate.ae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/mail.svg" alt="" />
+              Info@elstate.ae
+            </a>
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:+971522749765"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/phone.svg" alt="" />
+              +971-52-274-9765
+            </a>
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="https://maps.app.goo.gl/iHEPS3NBpUZEywFVA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/map.svg" alt="" />
+              Office no- 2012 Business Bay Dubai, UAE
+            </a>
+          </div>
+        </div>
+        <!-- Company -->
+        <p class="mt-20 md:mt-2.5 text-right">
+          Copyright © 2025-2026 Inside Dubai Estate. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Overlay + Burger -->
+    <div
+      id="burger-overlay"
+      class="fixed hidden inset-0 backdrop-blur-xs z-101"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-(--secondary) z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[14px] md:text-[20px]"
+    >
+      <a class="px-4" href="/">
+        <img class="h-7" src="assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="grow flex flex-col">
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/team.html"
+        >
+          Our Team
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/partners.html"
+        >
+          Partners
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/documents.html"
+        >
+          Documents
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/contacts.html"
+        >
+          Contacts
+        </a>
+      </nav>
+    </section>
+
+    <script src="/assets/js/burger.js"></script>
+  </body>
+</html>
