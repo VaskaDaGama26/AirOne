@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIR One Real Estate</title>
+
+    <link
+      rel="icon"
+      href="/AirOne/assets/img/favicon.svg"
+      type="image/svg+xml"
+    />
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="/AirOne/assets/fonts/Avenir_Next_World_Demi_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/AirOne/assets/fonts/Avenir_Next_World_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/AirOne/assets/css/style.css" />
+    <link rel="stylesheet" href="/AirOne/assets/css/broker.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 bg-(--primary) z-100">
+      <div class="container mx-auto px-4 flex justify-between py-5">
+        <a href="/AirOne/">
+          <img class="h-7 md:h-12" src="/AirOne/assets/img/logo.svg" alt="" />
+        </a>
+        <nav class="hidden md:flex gap-8 text-[16px]">
+          <a class="text-gradient p-2" href="/AirOne/">Home</a>
+          <a
+            class="text-gradient p-2 border-b border-b-[#F8C4B8]"
+            href="/AirOne/team.html"
+            >Our Team</a
+          >
+          <a class="text-gradient p-2" href="/AirOne/partners.html">Partners</a>
+          <a class="text-gradient p-2" href="/AirOne/documents.html"
+            >Documents</a
+          >
+          <a class="text-gradient p-2" href="/AirOne/contacts.html">Contacts</a>
+        </nav>
+        <button class="block md:hidden cursor-pointer" id="burger">
+          <img src="/AirOne/assets/img/burger.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Head Of Sales -->
+      <section class="container mx-auto px-4">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          Our Team
+        </h3>
+        <h4 class="text-[18px] md:text-[24px] mb-4 md:mb-6 uppercase">
+          Sales Department
+        </h4>
+        <div
+          class="mt-5 md:mt-12 flex flex-col md:flex-row md:items-start gap-6 md:gap-8"
+        >
+          <div
+            class="broker-wrapper w-full md:w-[408px] h-[294px] md:h-[350px] relative shrink-0"
+          >
+            <img
+              class="broker absolute inset-0 w-full h-full object-cover object-top rounded-[12px]"
+              src="/AirOne/assets/img/broker.jpg"
+              alt=""
+            />
+          </div>
+          <div class="flex flex-col items-start max-w-[500px]">
+            <h5 class="text-[24px] md:text-[40px] font-medium mb-3 md:mb-6">
+              John Carter
+            </h5>
+            <span class="text-[16px] md:text-[20px] mb-4 md:mb-5">
+              Head of Sales
+            </span>
+            <p class="text-[14px] md:text-[18px]">
+              Leads the sales strategy and oversees broker performance, ensuring
+              every client receives expert guidance and outstanding results.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Our Team -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h4 class="text-[20px] md:text-[28px] mb-4 md:mb-6">Active Brokers</h4>
+        <div class="flex flex-col gap-4 w-full overflow-x-auto">
+          <div
+            class="flex flex-row gap-4 w-max lg:grid lg:grid-cols-4 lg:w-full pb-2"
+          >
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/AirOne/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/AirOne/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/AirOne/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/AirOne/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Founders -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          Founders & Management
+        </h3>
+        <div class="flex flex-col gap-12 md:gap-10">
+          <div class="flex flex-col md:flex-row md:items-start gap-6 md:gap-8">
+            <div
+              class="broker-wrapper w-full md:w-[408px] h-[294px] md:h-[373px] relative shrink-0"
+            >
+              <img
+                class="broker absolute inset-0 w-full h-full object-cover object-top rounded-[12px]"
+                src="/AirOne/assets/img/broker.jpg"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col items-start max-w-[500px]">
+              <h5 class="text-[24px] md:text-[40px] font-medium mb-3 md:mb-6">
+                Andrei Alekseev
+              </h5>
+              <span class="text-[16px] md:text-[20px] mb-4 md:mb-5">
+                Founder & Owner
+              </span>
+              <p class="text-[14px] md:text-[18px]">
+                Visionary leader and founder of the company, building a
+                transparent and client-focused real estate business model.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-start gap-6 md:gap-8">
+            <div
+              class="broker-wrapper w-full md:w-[408px] h-[294px] md:h-[373px] relative shrink-0"
+            >
+              <img
+                class="broker absolute inset-0 w-full h-full object-cover object-top rounded-[12px]"
+                src="/AirOne/assets/img/broker.jpg"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col items-start max-w-[500px]">
+              <h5 class="text-[24px] md:text-[40px] font-medium mb-3 md:mb-6">
+                Anton Kishsh
+              </h5>
+              <span class="text-[16px] md:text-[20px] mb-4 md:mb-5">
+                Co-Founder & CMO
+              </span>
+              <p class="text-[14px] md:text-[18px]">
+                Leads marketing strategy and brand development, driving growth
+                and market visibility.
+              </p>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row md:items-start gap-6 md:gap-8">
+            <div
+              class="broker-wrapper w-full md:w-[408px] h-[294px] md:h-[373px] relative shrink-0"
+            >
+              <img
+                class="broker absolute inset-0 w-full h-full object-cover object-top rounded-[12px]"
+                src="/AirOne/assets/img/broker.jpg"
+                alt=""
+              />
+            </div>
+            <div class="flex flex-col items-start max-w-[500px]">
+              <h5 class="text-[24px] md:text-[40px] font-medium mb-3 md:mb-6">
+                Ekaterina Kishsh
+              </h5>
+              <span class="text-[16px] md:text-[20px] mb-4 md:mb-5">
+                Founder & Owner
+              </span>
+              <p class="text-[14px] md:text-[18px]">
+                Oversees daily operations, team efficiency, and internal systems
+                to ensure seamless client experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- HR -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          HR Department
+        </h3>
+        <div class="grid md:grid-cols-2 gap-12 md:gap-7 pb-2">
+          <div class="w-full h-[345px] rounded-[12px] relative overflow-hidden">
+            <div class="broker-wrapper w-full h-full">
+              <img
+                class="broker absolute inset-0 w-full h-full object-cover object-top"
+                src="/AirOne/assets/img/broker.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+            >
+              <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                Anna Petrova
+              </h5>
+              <span class="text-[12px] md:text-[16px] text-white/90">
+                HR Manager
+              </span>
+              <p class="text-[14px]">
+                Manages recruitment strategy and team development.
+              </p>
+            </div>
+          </div>
+          <div class="w-full h-[345px] rounded-[12px] relative overflow-hidden">
+            <div class="broker-wrapper w-full h-full">
+              <img
+                class="broker absolute inset-0 w-full h-full object-cover object-top"
+                src="/AirOne/assets/img/broker.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+            >
+              <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                Irina Volkova
+              </h5>
+              <span class="text-[12px] md:text-[16px] text-white/90">
+                Recruiter
+              </span>
+              <p class="text-[14px]">
+                Identifies and attracts top real estate talent.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Accounting -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          Accounting
+        </h3>
+        <div class="grid md:grid-cols-2 gap-12 md:gap-7 pb-2">
+          <div class="w-full h-[345px] rounded-[12px] relative overflow-hidden">
+            <div class="broker-wrapper w-full h-full">
+              <img
+                class="broker absolute inset-0 w-full h-full object-cover object-top"
+                src="/AirOne/assets/img/broker.jpg"
+                alt=""
+              />
+            </div>
+            <div
+              class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+            >
+              <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                Sergey Ivanov
+              </h5>
+              <span class="text-[12px] md:text-[16px] text-white/90">
+                Accountant
+              </span>
+              <p class="text-[14px]">
+                Ensures financial transparency and accurate reporting.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Administration -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          Administration
+        </h3>
+        <div class="flex flex-col gap-4 w-full overflow-x-auto">
+          <div
+            class="flex flex-row gap-4 w-max lg:grid lg:grid-cols-4 lg:w-full pb-2"
+          >
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/AirOne/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/AirOne/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/AirOne/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="w-[196px] md:w-[300px] lg:w-full rounded-[12px] relative h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div class="broker-wrapper w-full h-full">
+                <img
+                  class="broker absolute inset-0 w-full h-full object-cover"
+                  src="/AirOne/assets/img/broker.jpg"
+                  alt=""
+                />
+              </div>
+              <div
+                class="z-10 absolute left-0 bottom-0 px-4 py-6 flex flex-col items-start gap-2"
+              >
+                <h5 class="text-[16px] md:text-[24px] font-medium text-white">
+                  James Carter
+                </h5>
+                <p class="text-[12px] md:text-[16px] text-white/90">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="mt-9 md:mt-12 bg-(--secondary) pt-4 md:pt-11 pb-7 md:pb-15 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <!-- BG Logo -->
+        <img
+          class="pointer-events-none absolute -left-20 top-0 h-full"
+          src="/AirOne/assets/img/logo-transparent.svg"
+          alt=""
+        />
+        <!-- Socials + Logo -->
+        <div class="flex justify-between items-start gap-10">
+          <div class="flex items-center gap-4 md:gap-5">
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+            </a>
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/inst.svg"
+                alt="Instagram"
+              />
+            </a>
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+          <a href="/AirOne/">
+            <img
+              class="h-10 md:h-[68px]"
+              src="/AirOne/assets/img/logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- Nav + Contacts -->
+        <div
+          class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
+        >
+          <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/"
+              >Home
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/team.html"
+              >Our Team
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/partners.html"
+              >Partners
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/documents.html"
+              >Documents
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/contacts.html"
+              >Contacts
+            </a>
+          </nav>
+          <div
+            class="h-fit flex flex-col md:flex-row gap-5 md:gap-x-11 md:gap-y-5 md:justify-end flex-wrap max-w-[212px] md:max-w-none"
+          >
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="mailto:Info@elstate.ae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/mail.svg"
+                alt=""
+              />
+              Info@elstate.ae
+            </a>
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:+971522749765"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/phone.svg"
+                alt=""
+              />
+              +971-52-274-9765
+            </a>
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="https://maps.app.goo.gl/iHEPS3NBpUZEywFVA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/map.svg"
+                alt=""
+              />
+              Office no- 2012 Business Bay Dubai, UAE
+            </a>
+          </div>
+        </div>
+        <!-- Company -->
+        <p class="mt-20 md:mt-2.5 text-right">
+          Copyright © 2025-2026 Inside Dubai Estate. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Overlay + Burger -->
+    <div
+      id="burger-overlay"
+      class="fixed hidden inset-0 backdrop-blur-xs z-101"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-(--secondary) z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[14px] md:text-[20px]"
+    >
+      <a class="px-4" href="/AirOne/">
+        <img class="h-7" src="/AirOne/assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="grow flex flex-col">
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/AirOne/"
+        >
+          Home
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/AirOne/team.html"
+        >
+          Our Team
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/AirOne/partners.html"
+        >
+          Partners
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/AirOne/documents.html"
+        >
+          Documents
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/AirOne/contacts.html"
+        >
+          Contacts
+        </a>
+      </nav>
+    </section>
+
+    <script src="/AirOne/assets/js/burger.js"></script>
+  </body>
+</html>
