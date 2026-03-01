@@ -1,0 +1,10 @@
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-wrapper .input-error {
+  color: #ef4444;
+  font-size: 11px;
+}

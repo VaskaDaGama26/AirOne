@@ -24,6 +24,8 @@
     />
 
     <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/popover.css" />
+    <link rel="stylesheet" href="/assets/css/input.css" />
 
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
@@ -84,50 +86,164 @@
           </div>
         </div>
       </section>
-      <!-- Partners -->
+      <!-- Partner Main Info -->
       <section class="container mx-auto px-4 mt-9 md:mt-12">
-        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
-          Our Key Partners
-        </h3>
-        <div
-          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-3 gap-y-4 md:gap-x-7 md:gap-y-8"
-        >
-          <a
-            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
-            href="/partners/template.html"
-          >
-            <img src="/assets/img/partners/1.svg" alt="" />
-          </a>
-          <a
-            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
-            href="/partners/template.html"
+        <div class="flex flex-col md:flex-row items-center gap-6 md:gap-7">
+          <span
+            class="w-full md:max-w-[200px] px-7 py-7.5 md:py-15 bg-(--secondary) rounded-[16px] flex items-center justify-center"
           >
             <img src="/assets/img/partners/2.svg" alt="" />
-          </a>
-          <a
-            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
-            href="/partners/template.html"
+          </span>
+          <p class="text-[16px] md:text-[20px]">
+            Emaar Properties is one of the most influential real estate
+            developers in the Middle East. Established in Dubai, the company is
+            known for delivering large-scale master communities, premium
+            residential towers, and globally recognized landmarks.
+          </p>
+        </div>
+      </section>
+      <!-- Partner Form + Area -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <div class="flex flex-col md:flex-row gap-7 md:justify-between">
+          <div class="shrink-0 flex flex-col items-start gap-4 md:gap-8">
+            <h2 class="text-[20px] md:text-[28px]">Key Areas & Communities</h2>
+            <ul
+              class="list-disc ps-6 flex flex-col gap-3 items-start text-[16px] md:text-[24px]"
+            >
+              <li>Downtown Dubai</li>
+              <li>Dubai Marina</li>
+              <li>Emaar Beachfront</li>
+              <li>Arabian Ranches</li>
+              <li>Dubai Hills Estate</li>
+            </ul>
+          </div>
+          <!-- Form -->
+          <form
+            data-form
+            class="max-w-[750px] w-full bg-[#1F2336] rounded-[16px] md:rounded-[20px] px-3 md:px-6 py-5 flex flex-col gap-5 md:gap-4 h-fit"
           >
-            <img src="/assets/img/partners/3.svg" alt="" />
-          </a>
-          <a
-            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
-            href="/partners/template.html"
+            <div class="flex flex-col items-start gap-4">
+              <h5 class="text-[20px] md:text-[24px]">
+                Leave your contact details
+              </h5>
+              <p class="text-[14px] md:text-[16px]">
+                Our specialist will contact you shortly to provide consultation
+                and answer all your questions.
+              </p>
+            </div>
+            <div
+              class="grid grid-cols-1 lg:grid-cols-2 gap-y-4 md:gap-y-8 gap-x-5"
+            >
+              <div class="input-wrapper">
+                <input
+                  data-name
+                  class="transition-all duration-200 focus-visible:outline-none py-3 px-4 md:py-4 md:px-5 bg-[#FFFFFF52] rounded-[8px] text-[16px] text-[#FFFFFF] placeholder:text-[#E6E6E6]"
+                  type="text"
+                  placeholder="Name"
+                  oninput="this.value = this.value.replace(/[^A-Za-z\s\-]/g, '')"
+                  pattern="[A-Za-z\s\-]+"
+                />
+                <span class="input-error">
+                  Only Latin letters, spaces and hyphens allowed
+                </span>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  data-phone
+                  class="transition-all duration-200 focus-visible:outline-none py-3 px-4 md:py-4 md:px-5 bg-[#FFFFFF52] rounded-[8px] text-[16px] text-[#FFFFFF] placeholder:text-[#E6E6E6]"
+                  type="tel"
+                  placeholder="Phone"
+                  oninput="this.value = this.value.replace(/[^0-9+]/g, '')"
+                  pattern="[0-9+]+"
+                  inputmode="numeric"
+                />
+                <span class="input-error">
+                  Only numbers and plus sign allowed
+                </span>
+              </div>
+              <button
+                class="cursor-pointer lg:col-span-2 flex justify-center items-center text-center bg-gradient text-[#000624] py-2 md:py-3 text-[16px] md:text-[24px] rounded-[8px]"
+              >
+                Send Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <div class="flex flex-col gap-4 w-full overflow-x-auto">
+          <div
+            class="flex flex-row gap-4 w-max lg:grid lg:grid-cols-3 lg:w-full pb-2"
           >
-            <img src="/assets/img/partners/4.svg" alt="" />
-          </a>
-          <a
-            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
-            href="/partners/template.html"
-          >
-            <img src="/assets/img/partners/5.svg" alt="" />
-          </a>
-          <a
-            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
-            href="/partners/template.html"
-          >
-            <img src="/assets/img/partners/6.svg" alt="" />
-          </a>
+            <div
+              class="flex flex-col items-start gap-5 md:gap-8 w-[254px] md:w-[408px] lg:w-full relative overflow-hidden"
+            >
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="/assets/img/partners/template/1.webp"
+                />
+                <img
+                  class="rounded-[12px]"
+                  src="/assets/img/partners/template/1-mobile.webp"
+                  alt=""
+                />
+              </picture>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">
+                  Burj Khalifa Residences
+                </h6>
+                <p class="text-[16px] md:text-[20px]">
+                  Luxury apartments located in the world’s tallest tower,
+                  offering panoramic city views and premium amenities.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start gap-5 md:gap-8 w-[254px] md:w-[408px] lg:w-full relative overflow-hidden"
+            >
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="/assets/img/partners/template/2.webp"
+                />
+                <img
+                  class="rounded-[12px]"
+                  src="/assets/img/partners/template/2-mobile.webp"
+                  alt=""
+                />
+              </picture>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">Dubai Hills Estate</h6>
+                <p class="text-[16px] md:text-[20px]">
+                  A master-planned community featuring villas, townhouses, and
+                  apartments surrounded by parks and a championship golf course.
+                </p>
+              </div>
+            </div>
+            <div
+              class="flex flex-col items-start gap-5 md:gap-8 w-[254px] md:w-[408px] lg:w-full relative overflow-hidden"
+            >
+              <picture>
+                <source
+                  media="(min-width: 769px)"
+                  srcset="/assets/img/partners/template/1.webp"
+                />
+                <img
+                  class="rounded-[12px]"
+                  src="/assets/img/partners/template/1-mobile.webp"
+                  alt=""
+                />
+              </picture>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">Emaar Beachfront</h6>
+                <p class="text-[16px] md:text-[20px]">
+                  Waterfront living with private beach access and modern
+                  high-rise residences overlooking the Arabian Gulf.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -285,6 +401,19 @@
       </nav>
     </section>
 
+    <div class="popover-overlay" id="successOverlay">
+      <div class="success-popover" id="successPopover">
+        <div class="popover-content">
+          <span class="text-[16px] md:text-[20px] font-medium">Success!</span>
+          <p class="text-[12px] md:text-[16px] opacity-80">
+            Form submitted successfully!<br />Our specialist will contact you
+            soon.
+          </p>
+        </div>
+      </div>
+    </div>
+
     <script src="/assets/js/burger.js"></script>
+    <script src="/assets/js/form.js"></script>
   </body>
 </html>

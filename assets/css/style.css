@@ -1,6 +1,7 @@
 @import url(normalize.css);
 @import url(fonts.css);
 @import url(gradient.css);
+@import url(banner.css);
 
 :root {
   --primary: #00041a;
