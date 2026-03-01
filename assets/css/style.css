@@ -8,6 +8,7 @@
   --gradient: rgba(244, 190, 178, 1) 0%, rgba(249, 198, 186, 1) 50%,
     rgba(255, 220, 212, 1) 100%;
   --borderGradient: rgb(0, 6, 36), rgba(255, 255, 255, 0.333);
+  --borderGradientReverse: #000624, #000624, #f5c5b9;
 }
 
 * {
@@ -21,7 +22,11 @@ html {
   line-height: 1.2 !important;
 }
 
-.fullbody {
-
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
 }
-
+main {
+  flex: 1;
+}

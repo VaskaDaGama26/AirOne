@@ -49,7 +49,8 @@
 
 /* Other Pages */
 
-.banner-documents::before {
+.banner-documents::before,
+.banner-partners::before {
   pointer-events: none;
   content: "";
   position: absolute;
@@ -60,6 +61,7 @@
   z-index: 1;
 }
 
-.banner-documents::before {
+.banner-documents::before,
+.banner-partners::before {
   background: linear-gradient(to right, #000624, #1411360d);
 }

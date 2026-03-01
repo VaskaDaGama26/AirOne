@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Documents | AIR One Real Estate</title>
+
+    <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="/assets/fonts/Avenir_Next_World_Demi_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/assets/fonts/Avenir_Next_World_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/banner.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="sticky top-0 bg-(--primary) z-100">
+      <div class="container mx-auto px-4 flex justify-between py-5">
+        <a href="/">
+          <img class="h-7 md:h-12" src="/assets/img/logo.svg" alt="" />
+        </a>
+        <nav class="hidden md:flex gap-8 text-[16px]">
+          <a class="text-gradient p-2" href="/">Home</a>
+          <a class="text-gradient p-2" href="/team.html">Our Team</a>
+          <a
+            class="text-gradient p-2 border-b border-b-[#F8C4B8]"
+            href="/partners.html"
+          >
+            Partners
+          </a>
+          <a class="text-gradient p-2" href="/documents.html">Documents</a>
+          <a class="text-gradient p-2" href="/contacts.html">Contacts</a>
+        </nav>
+        <button class="block md:hidden cursor-pointer" id="burger">
+          <img src="/assets/img/burger.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Banner -->
+      <section class="container mx-auto px-4">
+        <div
+          class="border-gradient--reverse banner-partners relative rounded-[24px] w-full h-[360px] md:h-[390px] overflow-hidden"
+        >
+          <picture class="rounded-[24px] object-cover h-full w-full">
+            <source
+              media="(min-width: 769px)"
+              srcset="/assets/img/partners.webp"
+            />
+            <img
+              class="rounded-[24px] object-cover h-full w-full"
+              src="/assets/img/partners-mobile.webp"
+              alt=""
+            />
+          </picture>
+          <div
+            class="z-2 absolute inset-x-4 md:inset-x-13 top-6 md:top-1/2 md:-translate-y-1/2"
+          >
+            <h1 class="text-[20px] md:text-[32px] mb-4 md:mb-7 font-medium">
+              Building Strong Alliances with Leading Developers in Dubai
+            </h1>
+            <p class="text-[12px] md:text-[20px] max-w-[70%]">
+              At AIR One Real Estate LLC SOC, we collaborate with some of the
+              most reputable and established real estate developers in Dubai.
+              Our partnerships allow us to provide clients with direct access to
+              premium projects, priority inventory, and verified investment
+              opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Partners -->
+      <section class="container mx-auto px-4 mt-9 md:mt-12">
+        <h3 class="text-[28px] md:text-[40px] font-medium mb-5 md:mb-7">
+          Our Key Partners
+        </h3>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-x-3 gap-y-4 md:gap-x-7 md:gap-y-8"
+        >
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/1.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/2.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/3.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/4.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/5.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center hover:opacity-80 transition-all duration-300"
+            href="#"
+          >
+            <img src="/assets/img/partners/6.svg" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="mt-9 md:mt-12 bg-(--secondary) pt-4 md:pt-11 pb-7 md:pb-15 relative overflow-hidden"
+    >
+      <div class="container mx-auto px-4">
+        <!-- BG Logo -->
+        <img
+          class="pointer-events-none absolute -left-20 top-0 h-full"
+          src="/assets/img/logo-transparent.svg"
+          alt=""
+        />
+        <!-- Socials + Logo -->
+        <div class="flex justify-between items-start gap-10">
+          <div class="flex items-center gap-4 md:gap-5">
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+            </a>
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/inst.svg"
+                alt="Instagram"
+              />
+            </a>
+            <a class="hover:opacity-70 transition-all duration-300" href="#">
+              <img
+                class="h-7 md:h-10"
+                src="/assets/img/socials/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+          <a href="/">
+            <img class="h-10 md:h-[68px]" src="/assets/img/logo.svg" alt="" />
+          </a>
+        </div>
+        <!-- Nav + Contacts -->
+        <div
+          class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
+        >
+          <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
+            <a class="hover:text-[#f4beb2] transition-all duration-300" href="/"
+              >Home
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/team.html"
+              >Our Team
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/partners.html"
+              >Partners
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/documents.html"
+              >Documents
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/contacts.html"
+              >Contacts
+            </a>
+          </nav>
+          <div
+            class="h-fit flex flex-col md:flex-row gap-5 md:gap-x-11 md:gap-y-5 md:justify-end flex-wrap max-w-[212px] md:max-w-none"
+          >
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="mailto:Info@elstate.ae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/mail.svg" alt="" />
+              Info@elstate.ae
+            </a>
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:+971522749765"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/phone.svg" alt="" />
+              +971-52-274-9765
+            </a>
+            <a
+              class="flex gap-3 items-center hover:text-[#f4beb2] transition-all duration-300"
+              href="https://maps.app.goo.gl/iHEPS3NBpUZEywFVA"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="/assets/img/contacts/map.svg" alt="" />
+              Office no- 2012 Business Bay Dubai, UAE
+            </a>
+          </div>
+        </div>
+        <!-- Company -->
+        <p class="mt-20 md:mt-2.5 text-right">
+          Copyright © 2025-2026 Inside Dubai Estate. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Overlay + Burger -->
+    <div
+      id="burger-overlay"
+      class="fixed hidden inset-0 backdrop-blur-xs z-101"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-(--secondary) z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[14px] md:text-[20px]"
+    >
+      <a class="px-4" href="/">
+        <img class="h-7" src="assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="grow flex flex-col">
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/"
+        >
+          Home
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/team.html"
+        >
+          Our Team
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/partners.html"
+        >
+          Partners
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/documents.html"
+        >
+          Documents
+        </a>
+        <a
+          class="text-gradient py-3 px-4 border-b border-b-[#F8C4B847]"
+          href="/contacts.html"
+        >
+          Contacts
+        </a>
+      </nav>
+    </section>
+
+    <script src="/assets/js/burger.js"></script>
+  </body>
+</html>

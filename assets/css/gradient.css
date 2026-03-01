@@ -26,3 +26,9 @@
   background: linear-gradient(#00041a, #00041a) padding-box,
     linear-gradient(135deg, var(--borderGradient)) border-box;
 }
+
+.border-gradient--reverse {
+  border: 1px solid transparent;
+  background: linear-gradient(#00041a, #00041a) padding-box,
+    linear-gradient(315deg, var(--borderGradientReverse)) border-box;
+}
