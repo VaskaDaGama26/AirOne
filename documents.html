@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Documents | AIR One Real Estate</title>
 
-    <link rel="icon" href="/AirOne/assets/img/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="/AirOne/assets/img/favicon.svg"
+      type="image/svg+xml"
+    />
 
     <!-- Preload Fonts -->
     <link
@@ -28,13 +32,24 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body>
+    <!-- Bg Lights -->
+    <div class="-z-1">
+      <div
+        class="blur-circle"
+        style="width: 250px; height: 250px; right: 0; top: 200px"
+      ></div>
+      <div
+        class="blur-circle"
+        style="width: 420px; height: 420px; left: 0px; top: 700px"
+      ></div>
+    </div>
     <!-- Header -->
     <header class="sticky top-0 bg-(--primary) z-100">
       <div class="container mx-auto px-4 flex justify-between py-5">
         <a href="/AirOne/">
           <img class="h-7 md:h-12" src="/AirOne/assets/img/logo.svg" alt="" />
         </a>
-        <nav class="hidden md:flex gap-8 text-[16px]">
+        <nav class="items-center hidden md:flex gap-8 text-[16px]">
           <a class="text-gradient p-2" href="/AirOne/">Home</a>
           <a class="text-gradient p-2" href="/AirOne/team.html">Our Team</a>
           <a class="text-gradient p-2" href="/AirOne/partners.html">Partners</a>
@@ -90,13 +105,17 @@
       <section class="container mx-auto px-4 mt-9 md:mt-12">
         <div class="flex grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-7">
           <div
-            class="relative py-5 px-3 md:py-6 md:px-4 rounded-[8px] border-gradient"
+            class="relative py-5 px-3 md:py-6 md:px-4 rounded-[8px] border-gradient-conic"
           >
             <a
               class="absolute top-5 right-3 md:top-6 md:right-4 text-[#0FF582] text-[14px] md:text-[16px] flex items-center gap-2"
               href="#"
             >
-              <img class="h-5 md:h-6" src="/AirOne/assets/img/download.svg" alt="" />
+              <img
+                class="h-5 md:h-6"
+                src="/AirOne/assets/img/download.svg"
+                alt=""
+              />
               Click to download
             </a>
             <img
@@ -117,13 +136,17 @@
             </a>
           </div>
           <div
-            class="relative py-5 px-3 md:py-6 md:px-4 rounded-[8px] border-gradient"
+            class="relative py-5 px-3 md:py-6 md:px-4 rounded-[8px] border-gradient-conic"
           >
             <a
               class="absolute top-5 right-3 md:top-6 md:right-4 text-[#0FF582] text-[14px] md:text-[16px] flex items-center gap-2"
               href="#"
             >
-              <img class="h-5 md:h-6" src="/AirOne/assets/img/download.svg" alt="" />
+              <img
+                class="h-5 md:h-6"
+                src="/AirOne/assets/img/download.svg"
+                alt=""
+              />
               Click to download
             </a>
             <img
@@ -318,7 +341,11 @@
             </a>
           </div>
           <a href="/AirOne/">
-            <img class="h-10 md:h-[68px]" src="/AirOne/assets/img/logo.svg" alt="" />
+            <img
+              class="h-10 md:h-[68px]"
+              src="/AirOne/assets/img/logo.svg"
+              alt=""
+            />
           </a>
         </div>
         <!-- Nav + Contacts -->
@@ -326,7 +353,9 @@
           class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
         >
           <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
-            <a class="hover:text-[#f4beb2] transition-all duration-300" href="/AirOne/"
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/"
               >Home
             </a>
             <a
@@ -359,7 +388,11 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img class="h-5" src="/AirOne/assets/img/contacts/mail.svg" alt="" />
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/mail.svg"
+                alt=""
+              />
               Info@elstate.ae
             </a>
             <a
@@ -368,7 +401,11 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img class="h-5" src="/AirOne/assets/img/contacts/phone.svg" alt="" />
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/phone.svg"
+                alt=""
+              />
               +971-52-274-9765
             </a>
             <a
@@ -377,7 +414,11 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img class="h-5" src="/AirOne/assets/img/contacts/map.svg" alt="" />
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/map.svg"
+                alt=""
+              />
               Office no- 2012 Business Bay Dubai, UAE
             </a>
           </div>

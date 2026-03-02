@@ -31,3 +31,14 @@ body {
 main {
   flex: 1;
 }
+
+.blur-circle {
+  content: "";
+  width: 250px;
+  height: 250px;
+  background-color: #f4beb2;
+  opacity: 0.3;
+  border-radius: 999px;
+  position: absolute;
+  filter: blur(100px);
+}

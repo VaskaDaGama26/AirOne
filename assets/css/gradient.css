@@ -1,3 +1,19 @@
+@property --opacity {
+  syntax: "<number>";
+  initial-value: 0.5;
+  inherits: false;
+}
+@property --conic-angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+@keyframes rotateConic {
+  to {
+    --conic-angle: 360deg;
+  }
+}
+
 .text-gradient {
   background-image: linear-gradient(180deg, var(--gradient));
 
@@ -27,8 +43,43 @@
     linear-gradient(135deg, var(--borderGradient)) border-box;
 }
 
+.border-gradient-partner {
+  border: 1px solid transparent;
+  background: linear-gradient(#1f2336, #1f2336) padding-box,
+    linear-gradient(135deg, var(--borderGradient)) border-box;
+}
+
 .border-gradient--reverse {
   border: 1px solid transparent;
   background: linear-gradient(#00041a, #00041a) padding-box,
     linear-gradient(315deg, var(--borderGradientReverse)) border-box;
+}
+
+.border-gradient-conic {
+  border: 1px solid transparent;
+  background: linear-gradient(#00041a, #00041a) padding-box,
+    repeating-conic-gradient(from var(--conic-angle), var(--borderGradient))
+      border-box;
+
+  animation: rotateConic 20s linear infinite;
+}
+
+.border-card {
+  --border-size: 1px;
+  border: var(--border-size) solid transparent;
+}
+
+.border-card:hover {
+  border-image: conic-gradient(
+      from var(--conic-angle),
+      #00000000 0deg 150deg,
+      #f5c5b9 180deg 180deg,
+      #00000000 180deg 330deg,
+      #f5c5b9 360deg 360deg
+    )
+    1 stretch;
+}
+
+.border-card:hover {
+  animation: rotateConic 4s linear infinite;
 }
