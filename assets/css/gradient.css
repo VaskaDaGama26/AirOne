@@ -39,47 +39,85 @@
 
 .border-gradient {
   border: 1px solid transparent;
-  background: linear-gradient(#00041a, #00041a) padding-box,
+  background:
+    linear-gradient(#00041a, #00041a) padding-box,
     linear-gradient(135deg, var(--borderGradient)) border-box;
 }
 
 .border-gradient-partner {
   border: 1px solid transparent;
-  background: linear-gradient(#1f2336, #1f2336) padding-box,
+  background:
+    linear-gradient(#1f2336, #1f2336) padding-box,
     linear-gradient(135deg, var(--borderGradient)) border-box;
 }
 
 .border-gradient--reverse {
   border: 1px solid transparent;
-  background: linear-gradient(#00041a, #00041a) padding-box,
+  background:
+    linear-gradient(#00041a, #00041a) padding-box,
     linear-gradient(315deg, var(--borderGradientReverse)) border-box;
 }
 
 .border-gradient-conic {
   border: 1px solid transparent;
-  background: linear-gradient(#00041a, #00041a) padding-box,
+  background:
+    linear-gradient(#00041a, #00041a) padding-box,
     repeating-conic-gradient(from var(--conic-angle), var(--borderGradient))
       border-box;
-
   animation: rotateConic 20s linear infinite;
 }
 
 .border-card {
+  position: relative;
+  border-radius: 16px;
+  z-index: 1;
+}
+.border-card::before {
   --border-size: 1px;
-  border: var(--border-size) solid transparent;
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: var(--border-size);
+  background: transparent;
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: -1;
+  opacity: 0; /* Полностью прозрачный */
+  transition: opacity 0.3s ease;
 }
-
-.border-card:hover {
-  border-image: conic-gradient(
-      from var(--conic-angle),
-      #00000000 0deg 150deg,
-      #f5c5b9 180deg 180deg,
-      #00000000 180deg 330deg,
-      #f5c5b9 360deg 360deg
-    )
-    1 stretch;
-}
-
-.border-card:hover {
+.border-card:hover::before {
+  opacity: 1; /* Появляется при наведении */
+  background: conic-gradient(
+    from var(--conic-angle),
+    #00000000 0deg 150deg,
+    #f5c5b9 180deg 180deg,
+    #00000000 180deg 330deg,
+    #f5c5b9 360deg 360deg
+  );
   animation: rotateConic 4s linear infinite;
+}
+
+.border-gradient-card {
+  --gradient-angle: 135deg;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(#1f2336, #1f2336) padding-box,
+    linear-gradient(var(--gradient-angle), var(--borderGradient)) border-box;
+  transition: --gradient-angle 0.5s ease;
+}
+
+.border-gradient-card:hover {
+  --gradient-angle: 315deg;
+}
+
+/* Определяем CSS переменную для анимации */
+@property --gradient-angle {
+  syntax: '<angle>';
+  initial-value: 135deg;
+  inherits: false;
 }
