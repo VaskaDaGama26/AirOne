@@ -1,200 +1,177 @@
-document.addEventListener("DOMContentLoaded", function () {
+import { FormValidator } from "../assets/js/forms/FormValidator.js";
+import { PopoverManager } from "../assets/js/forms/PopoverManager.js";
+
+document.addEventListener("DOMContentLoaded", () => {
+  console.log(
+    "%c🚀 Инициализация формы",
+    "background: #4886FF; color: white; padding: 2px 5px; border-radius: 3px;",
+  );
+
+  // Находим элементы
   const form = document.querySelector("[data-form]");
+  const openPopupBtn = document.querySelector("[data-open-popup]");
+  const closePopupBtn = document.querySelector("[data-close-popup]");
+
+  console.log("📋 Поиск элементов DOM:");
+  console.log("   - Форма [data-form]:", form ? "✅ Найдена" : "❌ НЕ НАЙДЕНА");
+  console.log(
+    "   - Кнопка открытия [data-open-popup]:",
+    openPopupBtn ? "✅ Найдена" : "❌ НЕ НАЙДЕНА",
+  );
+  console.log(
+    "   - Кнопка закрытия [data-close-popup]:",
+    closePopupBtn ? "✅ Найдена" : "❌ НЕ НАЙДЕНА",
+  );
+
+  if (!form) {
+    console.error(
+      "%c❌ КРИТИЧЕСКАЯ ОШИБКА: Форма не найдена! Проверьте атрибут [data-form] в HTML",
+      "color: red; font-weight: bold;",
+    );
+    return;
+  }
+
+  // Проверяем наличие полей в форме
+  const nameInput = form.querySelector('[data-validate="name"]');
+  const phoneInput = form.querySelector('[data-validate="phone"]');
+  const checkboxInput = form.querySelector('[data-validate="checkbox"]');
+
+  console.log("📝 Поля формы:");
+  console.log(
+    "   - Поле имени [data-validate='name']:",
+    nameInput ? "✅ Найдено" : "❌ НЕ НАЙДЕНО",
+  );
+  console.log(
+    "   - Поле телефона [data-validate='phone']:",
+    phoneInput ? "✅ Найдено" : "❌ НЕ НАЙДЕНО",
+  );
+  console.log(
+    "   - Чекбокс [data-validate='checkbox']:",
+    checkboxInput ? "✅ Найдено" : "❌ НЕ НАЙДЕНО",
+  );
+
+  // Проверяем элементы попапа
   const overlay = document.getElementById("successOverlay");
   const popover = document.getElementById("successPopover");
 
-  if (!form) return;
+  console.log("🪟 Попап элементы:");
+  console.log(
+    "   - Оверлей #successOverlay:",
+    overlay ? "✅ Найден" : "❌ НЕ НАЙДЕН",
+  );
+  console.log(
+    "   - Попап #successPopover:",
+    popover ? "✅ Найден" : "❌ НЕ НАЙДЕН",
+  );
 
-  hideAllErrors();
+  if (!overlay || !popover) {
+    console.warn(
+      "⚠️ Попап не будет работать: отсутствуют элементы #successOverlay или #successPopover в HTML",
+    );
+  }
 
-  form.addEventListener("submit", function (e) {
+  // Инициализация классов
+  console.log("🛠 Инициализация классов...");
+
+  let validator, popup;
+
+  try {
+    validator = new FormValidator(form);
+    console.log("   ✅ FormValidator инициализирован успешно");
+  } catch (error) {
+    console.error("   ❌ Ошибка инициализации FormValidator:", error);
+  }
+
+  try {
+    popup = new PopoverManager("successOverlay", "successPopover");
+    console.log("   ✅ PopoverManager инициализирован успешно");
+  } catch (error) {
+    console.error("   ❌ Ошибка инициализации PopoverManager:", error);
+  }
+
+  // Отправка формы
+  form.addEventListener("submit", (e) => {
     e.preventDefault();
+    console.log(
+      "%c📤 Отправка формы",
+      "background: #FFA500; color: white; padding: 2px 5px; border-radius: 3px;",
+    );
 
-    hideAllErrors();
-
-    const nameInput = document.querySelector("[data-name]");
-    const phoneInput = document.querySelector("[data-phone]");
-
-    const nameErrorSpan = nameInput
-      ?.closest(".input-wrapper")
-      ?.querySelector(".input-error");
-    const phoneErrorSpan = phoneInput
-      ?.closest(".input-wrapper")
-      ?.querySelector(".input-error");
-
-    let hasErrors = false;
-
-    // Name Validation
-    if (!nameInput.value.trim()) {
-      showError(nameInput, nameErrorSpan, "Name is required");
-      hasErrors = true;
-    } else {
-      const nameRegex = /^[A-Za-z\s\-]+$/;
-      if (!nameRegex.test(nameInput.value)) {
-        showError(
-          nameInput,
-          nameErrorSpan,
-          "Only Latin letters, spaces and hyphens allowed"
-        );
-        hasErrors = true;
-      }
-
-      if (nameInput.value !== nameInput.value.trim()) {
-        showError(
-          nameInput,
-          nameErrorSpan,
-          "Name cannot have leading or trailing spaces"
-        );
-        hasErrors = true;
-      }
-
-      if (nameInput.value.includes("  ")) {
-        showError(
-          nameInput,
-          nameErrorSpan,
-          "Name cannot have multiple consecutive spaces"
-        );
-        hasErrors = true;
-      }
+    if (!validator) {
+      console.error("❌ FormValidator не инициализирован");
+      return;
     }
 
-    // Phone Validation
-    if (!phoneInput.value.trim()) {
-      showError(phoneInput, phoneErrorSpan, "Phone is required");
-      hasErrors = true;
+    console.log("🔍 Запуск валидации...");
+    const isValid = validator.validateAll();
+
+    console.log(
+      "   - Результат валидации:",
+      isValid ? "✅ Успешно" : "❌ Есть ошибки",
+    );
+
+    if (isValid) {
+      const formData = validator.getFormData();
+      console.log("   📦 Данные формы:", formData);
+
+      if (popup) {
+        console.log("   🟢 Открываем попап успеха");
+        popup.open();
+      } else {
+        console.error("   ❌ PopoverManager не инициализирован");
+      }
+
+      console.log("✅ Форма успешно обработана");
     } else {
-      const phoneWithoutSpaces = phoneInput.value.replace(/\s/g, "");
-      const phoneRegex = /^[0-9+]+$/;
+      const errors = validator.getErrors();
+      console.log("   ❌ Ошибки валидации:", errors);
 
-      if (!phoneRegex.test(phoneWithoutSpaces)) {
-        showError(
-          phoneInput,
-          phoneErrorSpan,
-          "Only numbers and plus sign allowed"
+      // Показываем первую ошибку в консоли
+      const firstErrorField = Object.keys(errors)[0];
+      if (firstErrorField) {
+        console.log(
+          `   ⚠️ Первое поле с ошибкой: ${firstErrorField} - "${errors[firstErrorField]}"`,
         );
-        hasErrors = true;
       }
-
-      if (phoneWithoutSpaces[0] !== "+") {
-        showError(
-          phoneInput,
-          phoneErrorSpan,
-          "Phone must start with plus symbol"
-        );
-        hasErrors = true;
-      }
-
-      if (/\s/.test(phoneInput.value)) {
-        showError(phoneInput, phoneErrorSpan, "Phone cannot contain spaces");
-        hasErrors = true;
-      }
-    }
-
-    if (!hasErrors) {
-      openPopover();
-      clearFormFields();
-      // form.submit();
     }
   });
 
-  function clearFormFields() {
-    const nameInput = document.querySelector("[data-name]");
-    const phoneInput = document.querySelector("[data-phone]");
-
-    if (nameInput) {
-      nameInput.value = "";
-    }
-
-    if (phoneInput) {
-      phoneInput.value = "";
-    }
-  }
-
-  function showError(input, errorSpan, message) {
-    input.classList.add("border-2", "border-[#ef4444]", "bg-[#ef44441A]");
-
-    if (errorSpan) {
-      errorSpan.textContent = message;
-      errorSpan.style.display = "block";
-    }
-  }
-
-  function hideAllErrors() {
-    document.querySelectorAll(".input-error").forEach((span) => {
-      span.style.display = "none";
-    });
-
-    document.querySelectorAll("[data-name], [data-phone]").forEach((input) => {
-      input.classList.remove("border-2", "border-[#ef4444]", "bg-[#ef44441A]");
-    });
-
-    if (overlay && overlay.classList.contains("active")) {
-      closePopover();
-    }
-  }
-
-  function openPopover() {
-    if (overlay) {
-      overlay.classList.add("active");
-      document.body.style.overflow = "hidden";
-    }
-  }
-
-  function closePopover() {
-    if (overlay) {
-      overlay.classList.remove("active");
-      document.body.style.overflow = "";
-    }
-  }
-
-  if (overlay) {
-    overlay.addEventListener("click", function (e) {
-      if (e.target === overlay) {
-        closePopover();
+  // Открыть попап по кнопке
+  if (openPopupBtn) {
+    openPopupBtn.addEventListener("click", () => {
+      console.log("🟢 Ручное открытие попапа по кнопке");
+      if (popup) {
+        popup.open();
+      } else {
+        console.error("❌ PopoverManager не инициализирован");
       }
     });
+    console.log("   ✅ Обработчик для открытия попапа добавлен");
+  } else {
+    console.log(
+      "   ⏭️ Кнопка открытия попапа отсутствует, обработчик не добавлен",
+    );
   }
-  if (popover) {
-    popover.addEventListener("click", function (e) {
-      closePopover();
-    });
-  }
-  document.addEventListener("keydown", function (e) {
-    if (e.key === "Escape" && overlay && overlay.classList.contains("active")) {
-      closePopover();
-    }
-  });
 
-  const nameInput = document.querySelector("[data-name]");
-  const phoneInput = document.querySelector("[data-phone]");
-
-  if (nameInput) {
-    nameInput.addEventListener("input", function () {
-      const wrapper = this.closest(".input-wrapper");
-      const errorSpan = wrapper?.querySelector(".input-error");
-      if (errorSpan) {
-        errorSpan.style.display = "none";
-      }
-      this.classList.remove("border-2", "border-[#ef4444]", "bg-[#ef44441A]");
-
-      if (overlay && overlay.classList.contains("active")) {
-        closePopover();
+  // Закрыть попап по кнопке
+  if (closePopupBtn) {
+    closePopupBtn.addEventListener("click", () => {
+      console.log("🔴 Ручное закрытие попапа по кнопке");
+      if (popup) {
+        popup.close();
+      } else {
+        console.error("❌ PopoverManager не инициализирован");
       }
     });
+    console.log("   ✅ Обработчик для закрытия попапа добавлен");
+  } else {
+    console.log(
+      "   ⏭️ Кнопка закрытия попапа отсутствует, обработчик не добавлен",
+    );
   }
 
-  if (phoneInput) {
-    phoneInput.addEventListener("input", function () {
-      const wrapper = this.closest(".input-wrapper");
-      const errorSpan = wrapper?.querySelector(".input-error");
-      if (errorSpan) {
-        errorSpan.style.display = "none";
-      }
-      this.classList.remove("border-2", "border-[#ef4444]", "bg-[#ef44441A]");
-
-      if (overlay && overlay.classList.contains("active")) {
-        closePopover();
-      }
-    });
-  }
+  console.log(
+    "%c✅ Инициализация завершена",
+    "background: #4CAF50; color: white; padding: 2px 5px; border-radius: 3px;",
+  );
 });
