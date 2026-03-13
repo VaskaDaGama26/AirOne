@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIR One Real Estate</title>
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="assets/fonts/Avenir_Next_World_Demi_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="assets/fonts/Avenir_Next_World_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/broker.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Bg Lights -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-1">
+      <div class="relative w-full h-full">
+        <div
+          class="blur-circle absolute"
+          style="width: 420px; height: 420px; left: 0px; top: 700px"
+        ></div>
+        <div
+          class="blur-circle absolute"
+          style="width: 300px; height: 300px; right: 0px; top: 1200px"
+        ></div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header class="sticky top-0 bg-(--primary) z-100">
+      <div class="flex justify-between mx-auto px-4 py-5 container">
+        <a href="/AirOne/">
+          <img class="h-7 md:h-12" src="assets/img/logo.svg" alt="" />
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-[16px]">
+          <a
+            class="p-2 border-b border-b-[#F8C4B8] text-gradient"
+            href="/AirOne/"
+            >Home</a
+          >
+          <a class="p-2 text-gradient" href="/AirOne/team.html">Our Team</a>
+          <a class="p-2 text-gradient" href="/AirOne/partners.html">Partners</a>
+          <a class="p-2 text-gradient" href="/AirOne/documents.html"
+            >Documents</a
+          >
+          <a class="p-2 text-gradient" href="/AirOne/contacts.html">Contacts</a>
+        </nav>
+        <button class="md:hidden block cursor-pointer" id="burger">
+          <img src="assets/img/icons/burger.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Banner -->
+      <section class="mx-auto px-4 container">
+        <div
+          class="relative border-gradient--reverse rounded-[12px] w-full h-[420px] md:h-[605px] overflow-hidden"
+        >
+          <picture>
+            <source
+              media="(min-width: 769px)"
+              srcset="assets/img/banners/banner.webp"
+            />
+            <img
+              class="relative rounded-[12px] w-full h-full object-cover object-bottom md:object-right banner nebo nebo--bl"
+              src="assets/img/banners/banner-mobile.webp"
+              alt=""
+            />
+          </picture>
+          <div
+            class="top-6 xl:top-auto xl:bottom-[100px] z-2 absolute inset-x-3 xl:inset-x-8 max-w-[630px]"
+          >
+            <h1 class="font-medium text-[24px] lg:text-[40px]">
+              AIR One
+            </h1>
+            <p class="mb-1.5 lg:mb-5 font-medium text-[18px] lg:text-[32px]">Real Estate LLC SOC</p>
+            <h2 class="mb-3 text-[14px] lg:text-[24px]">
+              Boutique real estate agency in Dubai
+            </h2>
+            <p class="text-[12px] lg:text-[16px]">
+              We create a trusted environment for our clients by combining
+              professional brokerage expertise, a system-driven approach, and
+              access to the best real estate investment opportunities in the UAE
+              market.
+            </p>
+          </div>
+          <a
+            class="bottom-0 left-0 z-2 absolute flex justify-center items-center bg-gradient py-2 md:py-3 rounded-[8px] w-[246px] md:w-[400px] text-[#000624] text-[16px] md:text-[24px] text-center"
+            href="/AirOne/contacts.html"
+          >
+            Contact Us
+          </a>
+        </div>
+      </section>
+      <!-- About -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-5 md:mb-7 font-medium text-[28px] md:text-[40px]">
+          About Company
+        </h3>
+        <div
+          class="flex lg:flex-row flex-col md:justify-between gap-4 md:gap-8 lg:gap-20 mb-6 md:mb-12"
+        >
+          <div class="flex flex-col items-start gap-4 md:gap-5">
+            <p class="text-[14px] md:text-[16px]">
+              AIR One Real Estate LLC SOC is a licensed boutique real estate
+              agency based in Dubai, operating within a structured and compliant
+              framework. We specialize in premium residential properties,
+              working with both investors and end-users who value transparency,
+              expertise, and long-term partnership.
+            </p>
+            <p class="text-[14px] md:text-[16px]">
+              Our approach is built around a clear ecosystem: experienced
+              brokers, internal systems, verified partners, and strong media
+              presence. We combine market analytics, structured processes, and
+              personal advisory to deliver secure, well-informed property
+              decisions. At AIR One, real estate is not just transactions — it
+              is a managed, professional environment designed to protect and
+              grow our clients’ investments.
+            </p>
+          </div>
+          <div
+            class="gap-x-3 gap-y-7 md:gap-x-5 md:gap-y-6 grid grid-cols-2 h-fit shrink-0"
+          >
+            <div class="flex flex-col gap-2 md:gap-4 h-fit">
+              <span
+                class="font-medium text-[32px] text-gradient md:text-[40px]"
+              >
+                250+
+              </span>
+              <p class="text-[14px] md:text-[16px]">Closed Transactions</p>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-4 h-fit">
+              <span
+                class="font-medium text-[32px] text-gradient md:text-[40px]"
+              >
+                $180M+
+              </span>
+              <p class="text-[14px] md:text-[16px]">Property Value Sold</p>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-4 h-fit">
+              <span
+                class="font-medium text-[32px] text-gradient md:text-[40px]"
+              >
+                92%
+              </span>
+              <p class="text-[14px] md:text-[16px]">Client Referral Rate</p>
+            </div>
+            <div class="flex flex-col gap-2 md:gap-4 h-fit">
+              <span
+                class="font-medium text-[32px] text-gradient md:text-[40px]"
+              >
+                15+
+              </span>
+              <p class="text-[14px] md:text-[16px]">
+                Verified Developer Partners
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          class="flex md:flex-row flex-col flex-wrap lg:flex-nowrap gap-6 md:gap-7"
+        >
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 border-gradient-conic rounded-[8px]"
+          >
+            <img class="h-12 md:h-20" src="assets/img/about/1.svg" alt="" />
+            <p class="text-[14px] md:text-[16px]">
+              Our strength is our brokers. Each specialist represents the
+              company personally, building long-term client relationships based
+              on trust, transparency, and results.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 border-gradient-conic rounded-[8px]"
+          >
+            <img class="h-12 md:h-20" src="assets/img/about/2.svg" alt="" />
+            <p class="text-[14px] md:text-[16px]">
+              We combine deep market knowledge, real transaction experience, and
+              a strong understanding of Dubai’s market to guide clients
+              confidently at every stage.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 border-gradient-conic rounded-[8px]"
+          >
+            <img class="h-12 md:h-20" src="assets/img/about/3.svg" alt="" />
+            <p class="text-[14px] md:text-[16px]">
+              AIR One operates on structured internal processes, verified
+              documentation, and clear workflows — ensuring consistency,
+              compliance, and reliability.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Our Team -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-5 md:mb-7 font-medium text-[28px] md:text-[40px]">
+          Our Team
+        </h3>
+        <h4 class="mb-4 md:mb-6 text-[20px] md:text-[28px]">Top Brokers</h4>
+        <div class="flex flex-col gap-4 w-full overflow-x-auto">
+          <div
+            class="flex flex-row gap-4 lg:grid lg:grid-cols-4 pb-2 w-max lg:w-full"
+          >
+            <div
+              class="relative rounded-[12px] w-[196px] md:w-[300px] lg:w-full h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div
+                class="broker-wrapper relative rounded-[12px] h-full w-full max-h-[400px] aspect-3/4 shrink-0"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 769px)"
+                    srcset="assets/img/team/desktop/Maxim Anischenko.png"
+                  />
+                  <img
+                    class="absolute inset-0 rounded-[12px] w-full h-full object-cover object-center"
+                    src="assets/img/team/mobile/Maxim Anischenko.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div
+                class="bottom-0 left-0 z-10 absolute flex flex-col items-start gap-2 px-4 py-6"
+              >
+                <h5 class="font-medium text-[16px] text-white md:text-[24px]">
+                  Maxim Anischenko
+                </h5>
+                <p class="text-[12px] text-white/90 md:text-[16px]">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative rounded-[12px] w-[196px] md:w-[300px] lg:w-full h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div
+                class="broker-wrapper relative rounded-[12px] h-full w-full max-h-[400px] aspect-3/4 shrink-0"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 769px)"
+                    srcset="assets/img/team/desktop/Ekaterina Buniaeva Broker.png"
+                  />
+                  <img
+                    class="absolute inset-0 rounded-[12px] w-full h-full object-cover object-center"
+                    src="assets/img/team/mobile/Ekaterina Buniaeva Broker.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div
+                class="bottom-0 left-0 z-10 absolute flex flex-col items-start gap-2 px-4 py-6"
+              >
+                <h5 class="font-medium text-[16px] text-white md:text-[24px]">
+                  Ekaterina Buniaeva
+                </h5>
+                <p class="text-[12px] text-white/90 md:text-[16px]">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative rounded-[12px] w-[196px] md:w-[300px] lg:w-full h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div
+                class="broker-wrapper relative rounded-[12px] h-full w-full max-h-[400px] aspect-3/4 shrink-0"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 769px)"
+                    srcset="assets/img/team/desktop/Shahbaz Khalid Broker.png"
+                  />
+                  <img
+                    class="absolute inset-0 rounded-[12px] w-full h-full object-cover object-center"
+                    src="assets/img/team/mobile/Shahbaz Khalid Broker.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div
+                class="bottom-0 left-0 z-10 absolute flex flex-col items-start gap-2 px-4 py-6"
+              >
+                <h5 class="font-medium text-[16px] text-white md:text-[24px]">
+                  Shahbaz Khalid
+                </h5>
+                <p class="text-[12px] text-white/90 md:text-[16px]">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative rounded-[12px] w-[196px] md:w-[300px] lg:w-full h-[264px] md:h-[404px] overflow-hidden"
+            >
+              <div
+                class="broker-wrapper relative rounded-[12px] h-full w-full max-h-[400px] aspect-3/4 shrink-0"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 769px)"
+                    srcset="assets/img/team/desktop/Konstantin Siegel Broker.png"
+                  />
+                  <img
+                    class="absolute inset-0 rounded-[12px] w-full h-full object-cover object-center"
+                    src="assets/img/team/mobile/Konstantin Siegel Broker.png"
+                    alt=""
+                  />
+                </picture>
+              </div>
+              <div
+                class="bottom-0 left-0 z-10 absolute flex flex-col items-start gap-2 px-4 py-6"
+              >
+                <h5 class="font-medium text-[16px] text-white md:text-[24px]">
+                  Konstantin Siegel
+                </h5>
+                <p class="text-[12px] text-white/90 md:text-[16px]">
+                  Real Estate Broker
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a
+          class="flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] w-full sm:w-1/2 md:w-[400px] text-[#000624] text-[16px] md:text-[24px] text-center"
+          href="/AirOne/team.html"
+          >View full team</a
+        >
+      </section>
+      <!-- Partners -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-5 md:mb-7 font-medium text-[28px] md:text-[40px]">
+          Partners
+        </h3>
+        <div
+          class="gap-x-3 gap-y-4 md:gap-x-7 md:gap-y-8 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6"
+        >
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/emaar.html"
+          >
+            <img src="assets/img/partners/emaar/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/beyond.html"
+          >
+            <img src="assets/img/partners/beyond/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/imtiaz.html"
+          >
+            <img src="assets/img/partners/imtiaz/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/damac.html"
+          >
+            <img src="assets/img/partners/damac/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/ellington.html"
+          >
+            <img src="assets/img/partners/ellington/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/binghatti.html"
+          >
+            <img src="assets/img/partners/binghatti/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/danube.html"
+          >
+            <img src="assets/img/partners/danube/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/aldar.html"
+          >
+            <img src="assets/img/partners/aldar/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/meraas.html"
+          >
+            <img src="assets/img/partners/meraas/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/nakheel.html"
+          >
+            <img src="assets/img/partners/nakheel/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/sobha.html"
+          >
+            <img src="assets/img/partners/sobha/logo.svg" alt="" />
+          </a>
+          <a
+            class="px-7 py-5 bg-(--secondary) rounded-[16px] flex items-center justify-center border-card"
+            href="/AirOne/partners/btp.html"
+          >
+            <img src="assets/img/partners/btp/logo.svg" alt="" />
+          </a>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="mt-9 md:mt-12 bg-(--secondary) pt-4 md:pt-11 pb-7 md:pb-15 relative overflow-hidden"
+    >
+      <div class="mx-auto px-4 container">
+        <!-- BG Logo -->
+        <img
+          class="top-0 -left-20 absolute h-full pointer-events-none"
+          src="assets/img/logo-transparent.svg"
+          alt=""
+        />
+        <!-- Socials + Logo -->
+        <div class="flex justify-between items-start gap-10">
+          <div class="flex items-center gap-4 md:gap-5">
+            <a
+              class="hover:opacity-70 transition-all duration-300"
+              href="https://t.me/alexeevinvest"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="assets/img/socials/tg.svg"
+                alt="Telegram"
+              />
+            </a>
+            <a
+              class="flex items-end gap-1 hover:opacity-70 transition-all duration-300"
+              href="https://www.youtube.com/@Alexeevinvest"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+              <span class="text-[#969696] text-[12px]">(RU)</span>
+            </a>
+            <a
+              class="flex items-end gap-1 hover:opacity-70 transition-all duration-300"
+              href="https://www.youtube.com/@AirOneRealEstateinDubai"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+              <span class="text-[#969696] text-[12px]">(EN)</span>
+            </a>
+            <a
+              class="hover:opacity-70 transition-all duration-300"
+              href="https://www.linkedin.com/company/110536617/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="assets/img/socials/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+          <a href="/AirOne/">
+            <img class="h-10 md:h-[68px]" src="assets/img/logo.svg" alt="" />
+          </a>
+        </div>
+        <!-- Nav + Contacts -->
+        <div
+          class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
+        >
+          <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/"
+              >Home
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/team.html"
+              >Our Team
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/partners.html"
+              >Partners
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/documents.html"
+              >Documents
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/contacts.html"
+              >Contacts
+            </a>
+          </nav>
+          <div
+            class="flex md:flex-row flex-col flex-wrap md:justify-end gap-5 md:gap-x-11 md:gap-y-5 max-w-[212px] md:max-w-none h-fit"
+          >
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="mailto:info@airone-group.ae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="assets/img/contacts/mail.svg" alt="" />
+              info@airone-group.ae
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:+971549936988"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="assets/img/contacts/phone.svg" alt="" />
+              +971 54 993 6988
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:042383533"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="assets/img/contacts/phone.svg" alt="" />
+              (04) 238 35 33
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img class="h-5" src="assets/img/contacts/map.svg" alt="" />
+              UAE, Dubai, Al Shafar Tower 1, 1006 office
+            </a>
+          </div>
+        </div>
+        <!-- Company -->
+        <p class="mt-20 md:mt-2.5 text-right">
+          Copyright © 2025-2026 Inside Dubai Estate. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Overlay + Burger -->
+    <div
+      id="burger-overlay"
+      class="hidden z-101 fixed inset-0 backdrop-blur-xs"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-(--secondary) z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[14px] md:text-[20px]"
+    >
+      <a class="px-4" href="/AirOne/">
+        <img class="h-7" src="assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="flex flex-col grow">
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/"
+        >
+          Home
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/team.html"
+        >
+          Our Team
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/partners.html"
+        >
+          Partners
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/documents.html"
+        >
+          Documents
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/contacts.html"
+        >
+          Contacts
+        </a>
+      </nav>
+    </section>
+
+    <script src="assets/js/burger.js"></script>
+  </body>
+</html>
