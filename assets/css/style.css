@@ -1,0 +1,44 @@
+@import url(normalize.css);
+@import url(fonts.css);
+@import url(gradient.css);
+@import url(banner.css);
+
+:root {
+  --primary: #00041a;
+  --secondary: #1f2336;
+  --gradient: rgba(244, 190, 178, 1) 0%, rgba(249, 198, 186, 1) 50%,
+    rgba(255, 220, 212, 1) 100%;
+  --borderGradient: rgb(0, 6, 36), rgba(255, 255, 255, 0.333);
+  --borderGradientReverse: #000624, #000624, #f5c5b9;
+}
+
+* {
+  font-family: "Avenir Next World", ui-sans-serif, system-ui, sans-serif !important;
+}
+
+html {
+  background-color: var(--primary);
+  color: #ffffff;
+  height: 100dvh !important;
+  line-height: 1.2 !important;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+main {
+  flex: 1;
+}
+
+.blur-circle {
+  content: "";
+  width: 250px;
+  height: 250px;
+  background-color: #f4beb2;
+  opacity: 0.3;
+  border-radius: 999px;
+  position: absolute;
+  filter: blur(100px);
+}

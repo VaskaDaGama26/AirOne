@@ -1,0 +1,543 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ohana by Jacob & Co | AIR One Real Estate</title>
+
+    <link
+      rel="icon"
+      href="/AirOne/assets/img/favicon.svg"
+      type="image/svg+xml"
+    />
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="/AirOne/assets/fonts/Avenir_Next_World_Demi_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      href="/AirOne/assets/fonts/Avenir_Next_World_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin=""
+    />
+
+    <link rel="stylesheet" href="/AirOne/assets/css/style.css" />
+    <link rel="stylesheet" href="/AirOne/assets/css/popover.css" />
+    <link rel="stylesheet" href="/AirOne/assets/css/input.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Bg Lights -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-1">
+      <div class="relative w-full h-full">
+        <div
+          class="blur-circle absolute"
+          style="width: 250px; height: 250px; right: 0; top: 200px"
+        ></div>
+        <div
+          class="blur-circle absolute"
+          style="width: 420px; height: 420px; left: 0px; top: 700px"
+        ></div>
+        <div
+          class="blur-circle absolute"
+          style="width: 300px; height: 300px; right: 0px; top: 1600px"
+        ></div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header class="sticky top-0 bg-(--primary) z-100">
+      <div class="flex justify-between mx-auto px-4 py-5 container">
+        <a href="/AirOne/">
+          <img class="h-7 md:h-12" src="/AirOne/assets/img/logo.svg" alt="" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 text-[16px]">
+          <a class="p-2 text-gradient" href="/AirOne/">Home</a>
+          <a class="p-2 text-gradient" href="/AirOne/team.html">Our Team</a>
+          <a class="p-2 text-gradient" href="/AirOne/partners.html">
+            Partners
+          </a>
+          <a class="p-2 text-gradient" href="/AirOne/documents.html"
+            >Documents</a
+          >
+          <a class="p-2 text-gradient" href="/AirOne/contacts.html">Contacts</a>
+          <a
+            class="p-2 border-b border-b-[#F8C4B8] text-gradient"
+            href="/AirOne/communities.html"
+            >Communities</a
+          >
+        </nav>
+        <button
+          class="lg:hidden block cursor-pointer"
+          id="burger"
+          aria-expanded="false"
+          aria-controls="burger"
+        >
+          <img src="/AirOne/assets/img/icons/burger.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Banner -->
+      <section class="mx-auto px-4 container">
+        <div
+          class="relative border-gradient--reverse rounded-[24px] w-full h-[360px] md:h-[390px] overflow-hidden banner-partners"
+        >
+          <img
+            class="rounded-[24px] w-full h-full object-cover"
+            src="/AirOne/assets/img/communities/2-OhanabyJacob&Co.webp"
+            alt=""
+          />
+          <div
+            class="top-6 md:top-1/2 z-2 absolute inset-x-4 md:inset-x-13 md:-translate-y-1/2"
+          >
+            <h1 class="mb-4 font-medium text-[20px] md:text-[32px]">
+              Ohana by Jacob & Co
+            </h1>
+            <span class="opacity-70 font-medium">Status: Off-plan</span>
+            <div class="mt-7 flex flex-col items-start gap-3 md:gap-5">
+              <div class="flex items-start gap-2">
+                <img src="/AirOne/assets/img/icons/tower.svg" alt="" />
+                <span class="text-[14px] md:text-[20px]"
+                  >Ohana Development</span
+                >
+              </div>
+              <div class="flex items-start gap-2">
+                <img src="/AirOne/assets/img/icons/map.svg" alt="" />
+                <span class="text-[14px] md:text-[20px]"
+                  >Coastline between Dubai and Abu Dhabi, Al Jurf area</span
+                >
+              </div>
+              <div class="flex items-start gap-2">
+                <img src="/AirOne/assets/img/icons/house.svg" alt="" />
+                <span class="text-[14px] md:text-[20px]"
+                  >Branded villas and residences</span
+                >
+              </div>
+              <div class="flex items-start gap-2">
+                <img src="/AirOne/assets/img/icons/clock.svg" alt="" />
+                <span class="text-[14px] md:text-[20px]"
+                  >Handover: 2027–2028</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Main -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <div class="grid md:grid-cols-2 gap-4 md:gap-8">
+          <div class="flex flex-col items-start">
+            <div class="flex flex-col">
+              <h3 class="mb-4 md:mb-7 text-[24px] lg:text-[40px] font-medium">
+                Ohana by Jacob & Co
+              </h3>
+              <p class="text-[16px] md:text-[20px] leading-relaxed">
+                Ohana by Jacob & Co is an ultra-premium project of branded
+                residences created in collaboration with the luxury jewelry
+                house Jacob & Co. The project combines high-end architecture,
+                designer interiors, and a resort-style lifestyle on the
+                coastline. Each villa is designed with a focus on privacy,
+                panoramic views, and spacious living areas.
+              </p>
+            </div>
+          </div>
+
+          <div class="relative h-[220px] mt-4 md:mt-0 md:h-full">
+            <img
+              class="absolute inset-0 w-full h-full object-cover rounded-[12px] md:rounded-[20px]"
+              src="/AirOne/assets/img/communities/OhanabyJacob&Co.webp"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <!-- Key Features -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-4 md:mb-7 text-[24px] lg:text-[40px] font-medium">
+          Key Features
+        </h3>
+        <div class="grid md:grid-cols-3 gap-x-7 gap-y-3 md:gap-y-6">
+          <div
+            class="flex items-start gap-2 rounded-[16px] py-4 px-5 border-gradient-conic"
+          >
+            <img src="/AirOne/assets/img/icons/partners/1.svg" alt="" />
+            <span class="text-[16px] md:text-[20px]"
+              >Modern luxury-style architecture</span
+            >
+          </div>
+          <div
+            class="flex items-start gap-2 rounded-[16px] py-4 px-5 border-gradient-conic"
+          >
+            <img src="/AirOne/assets/img/icons/partners/2.svg" alt="" />
+            <span class="text-[16px] md:text-[20px]"
+              >Spacious villas with panoramic windows</span
+            >
+          </div>
+          <div
+            class="flex items-start gap-2 rounded-[16px] py-4 px-5 border-gradient-conic"
+          >
+            <img src="/AirOne/assets/img/icons/partners/3.svg" alt="" />
+            <span class="text-[16px] md:text-[20px]"
+              >Private pools and terraces</span
+            >
+          </div>
+          <div
+            class="flex items-start gap-2 rounded-[16px] py-4 px-5 border-gradient-conic"
+          >
+            <img src="/AirOne/assets/img/icons/partners/4.svg" alt="" />
+            <span class="text-[16px] md:text-[20px]">Designer interiors</span>
+          </div>
+          <div
+            class="flex items-start gap-2 rounded-[16px] py-4 px-5 border-gradient-conic"
+          >
+            <img src="/AirOne/assets/img/icons/partners/5.svg" alt="" />
+            <span class="text-[16px] md:text-[20px]">Private beach areas</span>
+          </div>
+          <div
+            class="flex items-start gap-2 rounded-[16px] py-4 px-5 border-gradient-conic"
+          >
+            <img src="/AirOne/assets/img/icons/partners/6.svg" alt="" />
+            <span class="text-[16px] md:text-[20px]">A limited number of residences</span>
+          </div>
+        </div>
+      </section>
+      <!-- Payment Plan -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-4 md:mb-7 text-[24px] lg:text-[40px] font-medium">
+          Payment Plan
+        </h3>
+        <span class="opacity-70">(may vary depending on the phase)</span>
+        <div
+          class="mt-7 grid grid-cols-2 xl:grid-cols-[10fr_40fr_50fr] gap-2 md:gap-4"
+        >
+          <div
+            class="flex flex-col gap-3 md:gap-5 items-start py-2 md:py-4 px-4 md:px-6 md:px-12 rounded-[12px] md:rounded-[20px] border-gradient-conic"
+          >
+            <span class="text-gradient font-medium text-[18px] md:text-[92px]"
+              >10%</span
+            >
+            <p class="text-[12px] md:text-[24px]">Reservation</p>
+          </div>
+          <div
+            class="flex flex-col gap-3 md:gap-5 items-start py-2 md:py-4 px-4 md:px-6 md:px-12 rounded-[12px] md:rounded-[20px] border-gradient-conic"
+          >
+            <span class="text-gradient font-medium text-[18px] md:text-[92px]"
+              >40%</span
+            >
+            <p class="text-[12px] md:text-[24px]">During construction</p>
+          </div>
+          <div
+            class="flex flex-col gap-3 md:gap-5 items-start py-2 md:py-4 px-4 md:px-6 md:px-12 rounded-[12px] md:rounded-[20px] border-gradient-conic"
+          >
+            <span class="text-gradient font-medium text-[18px] md:text-[92px]"
+              >50%</span
+            >
+            <p class="text-[12px] md:text-[24px]">On handover</p>
+          </div>
+        </div>
+      </section>
+      <!-- Amenities -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-4 md:mb-7 text-[24px] lg:text-[40px] font-medium">
+          Amenities
+        </h3>
+        <div
+          class="grid grid-cols-2 md:grid-cols-4 gap-x-3 md:gap-x-7 gap-y-4 md:gap-y-8"
+        >
+          <div
+            class="flex flex-col gap-5 items-start py-4 md:py-6 px-4 md:px-5 bg-[#1F2336] rounded-[12px] md:rounded-[20px]"
+          >
+            <img src="/AirOne/assets/img/icons/amenities/1.svg" alt="" />
+            <span class="text-[16px] md:text-[24px]">Private beach</span>
+          </div>
+          <div
+            class="flex flex-col gap-5 items-start py-4 md:py-6 px-4 md:px-5 bg-[#1F2336] rounded-[12px] md:rounded-[20px]"
+          >
+            <img src="/AirOne/assets/img/icons/amenities/2.svg" alt="" />
+            <span class="text-[16px] md:text-[24px]">Beach club</span>
+          </div>
+          <div
+            class="flex flex-col gap-5 items-start py-4 md:py-6 px-4 md:px-5 bg-[#1F2336] rounded-[12px] md:rounded-[20px]"
+          >
+            <img src="/AirOne/assets/img/icons/amenities/3.svg" alt="" />
+            <span class="text-[16px] md:text-[24px]">Wellness and spa</span>
+          </div>
+          <div
+            class="flex flex-col gap-5 items-start py-4 md:py-6 px-4 md:px-5 bg-[#1F2336] rounded-[12px] md:rounded-[20px]"
+          >
+            <img src="/AirOne/assets/img/icons/amenities/4.svg" alt="" />
+            <span class="text-[16px] md:text-[24px]">Fitness center</span>
+          </div>
+          <div
+            class="flex flex-col gap-5 items-start py-4 md:py-6 px-4 md:px-5 bg-[#1F2336] rounded-[12px] md:rounded-[20px]"
+          >
+            <img src="/AirOne/assets/img/icons/amenities/5.svg" alt="" />
+            <span class="text-[16px] md:text-[24px]">Restaurants and cafés</span>
+          </div>
+          <div
+            class="flex flex-col gap-5 items-start py-4 md:py-6 px-4 md:px-5 bg-[#1F2336] rounded-[12px] md:rounded-[20px]"
+          >
+            <img src="/AirOne/assets/img/icons/amenities/5.svg" alt="" />
+            <span class="text-[16px] md:text-[24px]">Waterfront promenades</span>
+          </div>
+          <div
+            class="flex flex-col gap-5 items-start py-4 md:py-6 px-4 md:px-5 bg-[#1F2336] rounded-[12px] md:rounded-[20px]"
+          >
+            <img src="/AirOne/assets/img/icons/amenities/6.svg" alt="" />
+            <span class="text-[16px] md:text-[24px]">Green areas and parks</span>
+          </div>
+        </div>
+      </section>
+      <!-- Location -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-4 md:mb-7 text-[24px] lg:text-[40px] font-medium">Location</h3>
+        <div class="flex gap-6">
+          <div
+            class="flex flex-col gap-5 items-start py-3 px-4 rounded-[12px] md:rounded-[20px] border-gradient"
+          >
+            <span class="text-[20px]">~30 minutes to Dubai Marina</span>
+          </div>
+          <div
+            class="flex flex-col gap-5 items-start py-3 px-4 rounded-[12px] md:rounded-[20px] border-gradient"
+          >
+            <span class="text-[20px]">~40 minutes to Downtown Dubai</span>
+          </div>
+          <div
+            class="flex flex-col gap-5 items-start py-3 px-4 rounded-[12px] md:rounded-[20px] border-gradient"
+          >
+            <span class="text-[20px]">~35 minutes to Abu Dhabi International Airport</span>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="mt-9 md:mt-12 bg-(--secondary) pt-4 md:pt-11 pb-7 md:pb-15 relative overflow-hidden"
+    >
+      <div class="mx-auto px-4 container">
+        <!-- BG Logo -->
+        <img
+          class="top-0 -left-20 absolute h-full pointer-events-none"
+          src="/AirOne/assets/img/logo-transparent.svg"
+          alt=""
+        />
+        <!-- Socials + Logo -->
+        <div class="flex justify-between items-start gap-10">
+          <div class="flex items-center gap-4 md:gap-5">
+            <a
+              class="hover:opacity-70 transition-all duration-300"
+              href="https://t.me/alexeevinvest"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/tg.svg"
+                alt="Telegram"
+              />
+            </a>
+            <a
+              class="flex items-end gap-1 hover:opacity-70 transition-all duration-300"
+              href="https://www.youtube.com/@Alexeevinvest"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+              <span class="text-[#969696] text-[12px]">(RU)</span>
+            </a>
+            <a
+              class="flex items-end gap-1 hover:opacity-70 transition-all duration-300"
+              href="https://www.youtube.com/@AirOneRealEstateinDubai"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+              <span class="text-[#969696] text-[12px]">(EN)</span>
+            </a>
+            <a
+              class="hover:opacity-70 transition-all duration-300"
+              href="https://www.linkedin.com/company/110536617/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+          <a href="/AirOne/">
+            <img
+              class="h-10 md:h-[68px]"
+              src="/AirOne/assets/img/logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- Nav + Contacts -->
+        <div
+          class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
+        >
+          <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/"
+              >Home
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/team.html"
+              >Our Team
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/partners.html"
+              >Partners
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/documents.html"
+              >Documents
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/contacts.html"
+              >Contacts
+            </a>
+          </nav>
+          <div
+            class="flex md:flex-row flex-col flex-wrap md:justify-end gap-5 md:gap-x-11 md:gap-y-5 max-w-[212px] md:max-w-none h-fit"
+          >
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="mailto:info@airone-group.ae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/mail.svg"
+                alt=""
+              />
+              info@airone-group.ae
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:+971549936988"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/phone.svg"
+                alt=""
+              />
+              +971 54 993 6988
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:042383533"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/phone.svg"
+                alt=""
+              />
+              (04) 238 35 33
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/map.svg"
+                alt=""
+              />
+              UAE, Dubai, Al Shafar Tower 1, 1006 office
+            </a>
+          </div>
+        </div>
+        <!-- Company -->
+        <p class="mt-20 md:mt-2.5 text-right">
+          Copyright ©&nbsp;2025-2026&nbsp;Inside Dubai Estate. All rights
+          reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Overlay + Burger -->
+    <div
+      id="burger-overlay"
+      class="hidden z-101 fixed inset-0 backdrop-blur-xs"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-(--secondary) z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[14px] md:text-[20px]"
+    >
+      <a class="px-4" href="/AirOne/">
+        <img class="h-7" src="/AirOne/assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="flex flex-col grow">
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/"
+        >
+          Home
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/team.html"
+        >
+          Our Team
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/partners.html"
+        >
+          Partners
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/documents.html"
+        >
+          Documents
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/contacts.html"
+        >
+          Contacts
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/communities.html"
+        >
+          Comminities
+        </a>
+      </nav>
+    </section>
+
+    <script src="/AirOne/assets/js/burger.js"></script>
+    <script src="/AirOne/assets/js/form.js" type="module"></script>
+  </body>
+</html>

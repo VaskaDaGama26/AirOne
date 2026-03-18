@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meraas | AIR One Real Estate</title>
+
+    <link
+      rel="icon"
+      href="/AirOne/assets/img/favicon.svg"
+      type="image/svg+xml"
+    />
+
+    <!-- Preload Fonts -->
+    <link
+      rel="preload"
+      href="/AirOne/assets/fonts/Avenir_Next_World_Demi_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="/AirOne/assets/fonts/Avenir_Next_World_Regular.ttf"
+      as="font"
+      type="truetype"
+      crossorigin
+    />
+
+    <link rel="stylesheet" href="/AirOne/assets/css/style.css" />
+    <link rel="stylesheet" href="/AirOne/assets/css/popover.css" />
+    <link rel="stylesheet" href="/AirOne/assets/css/input.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <!-- Bg Lights -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-1">
+      <div class="relative w-full h-full">
+        <div
+          class="blur-circle absolute"
+          style="width: 250px; height: 250px; right: 0; top: 200px"
+        ></div>
+        <div
+          class="blur-circle absolute"
+          style="width: 420px; height: 420px; left: 0px; top: 700px"
+        ></div>
+        <div
+          class="blur-circle absolute"
+          style="width: 300px; height: 300px; right: 0px; top: 1600px"
+        ></div>
+      </div>
+    </div>
+    <!-- Header -->
+    <header class="sticky top-0 bg-(--primary) z-100">
+      <div class="flex justify-between mx-auto px-4 py-5 container">
+        <a href="/AirOne/">
+          <img class="h-7 md:h-12" src="/AirOne/assets/img/logo.svg" alt="" />
+        </a>
+        <nav class="hidden lg:flex items-center gap-8 text-[16px]">
+          <a class="p-2 text-gradient" href="/AirOne/">Home</a>
+          <a class="p-2 text-gradient" href="/AirOne/team.html">Our Team</a>
+          <a
+            class="p-2 border-b border-b-[#F8C4B8] text-gradient"
+            href="/AirOne/partners.html"
+          >
+            Partners
+          </a>
+          <a class="p-2 text-gradient" href="/AirOne/documents.html"
+            >Documents</a
+          >
+          <a class="p-2 text-gradient" href="/AirOne/contacts.html">Contacts</a>
+          <a class="p-2 text-gradient" href="/AirOne/communities.html">Communities</a>
+        </nav>
+        <button class="lg:hidden block cursor-pointer" id="burger">
+          <img src="/AirOne/assets/img/icons/burger.svg" alt="" />
+        </button>
+      </div>
+    </header>
+    <main>
+      <!-- Banner -->
+      <section class="mx-auto px-4 container">
+        <div
+          class="relative border-gradient--reverse rounded-[24px] w-full h-[360px] md:h-[390px] overflow-hidden banner-partners"
+        >
+          <picture>
+            <source
+              media="(min-width: 769px)"
+              srcset="/AirOne/assets/img/banners/partners.webp"
+            />
+            <img
+              class="rounded-[24px] w-full h-full object-cover"
+              src="/AirOne/assets/img/banners/partners-mobile.webp"
+              alt=""
+            />
+          </picture>
+          <div
+            class="top-6 md:top-1/2 z-2 absolute inset-x-4 md:inset-x-13 md:-translate-y-1/2"
+          >
+            <h1 class="mb-4 md:mb-7 font-medium text-[20px] md:text-[32px]">
+              Building Strong Alliances with Leading Developers in Dubai
+            </h1>
+            <p class="max-w-[70%] text-[12px] md:text-[20px]">
+              At AIR One Real Estate LLC SOC, we collaborate with some of the
+              most reputable and established real estate developers in Dubai.
+              Our partnerships allow us to provide clients with direct access to
+              premium projects, priority inventory, and verified investment
+              opportunities.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Partner Main Info -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <div class="flex md:flex-row flex-col items-start gap-6 md:gap-7">
+          <span
+            class="w-full md:max-w-[200px] p-7 bg-(--secondary) rounded-[16px] flex items-center justify-center"
+          >
+            <img
+              class="max-h-10"
+              src="/AirOne/assets/img/partners/meraas/logo.svg"
+              alt=""
+            />
+          </span>
+          <p class="text-[16px] md:text-[20px] leading-relaxed">
+            Meraas is a Dubai based master developer founded in 2007, recognised
+            for creating destination driven real estate with strong lifestyle,
+            leisure, and community components across the UAE. The company
+            operates predominantly in the residential, mixed use, and urban
+            retail segments, delivering developments that blend innovative
+            placemaking with experiential living environments. Its target
+            audience includes homebuyers, families, professionals, lifestyle
+            seekers, and global investors seeking quality living, community
+            vibrancy, and strong asset fundamentals. Project types span
+            beachfront and waterfront residences, urban neighbourhoods, mixed
+            use communities, and branded luxury developments integrated with
+            leisure and retail offerings.
+          </p>
+        </div>
+      </section>
+      <!-- Landmark Projects -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-5 md:mb-7 font-medium text-[28px] md:text-[40px]">
+          Landmark Projects
+        </h3>
+        <div class="flex flex-col gap-4 w-full overflow-x-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+            <div
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden"
+            >
+              <div class="w-full h-[212px] md:h-[360px]">
+                <img
+                  class="rounded-[12px] w-full h-full object-center object-cover"
+                  src="/AirOne/assets/img/partners/meraas/landmark/CityWalk.webp"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">City Walk</h6>
+                <p class="text-[14px] md:text-[18px]">
+                  A premier urban neighbourhood combining residential towers,
+                  street level retail, dining, art installations, and green
+                  corridors in one cohesive lifestyle district.
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden"
+            >
+              <div class="w-full h-[212px] md:h-[360px]">
+                <img
+                  class="rounded-[12px] w-full h-full object-center object-cover"
+                  src="/AirOne/assets/img/partners/meraas/landmark/BluewatersIsland.webp"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">Bluewaters Island</h6>
+                <p class="text-[14px] md:text-[18px]">
+                  A landmark island community featuring residential buildings,
+                  retail, hospitality and Ain Dubai, the world’s tallest
+                  observation wheel, supporting both resident living and tourism
+                  flows.
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden"
+            >
+              <div class="w-full h-[212px] md:h-[360px]">
+                <img
+                  class="rounded-[12px] w-full h-full object-center object-cover"
+                  src="/AirOne/assets/img/partners/meraas/landmark/PortdeLaMer.webp"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">
+                  Port de La Mer & La Mer
+                </h6>
+                <p class="text-[14px] md:text-[18px]">
+                  Mediterranean inspired waterfront communities offering
+                  beachfront residences, marina proximity, and vibrant leisure
+                  precincts.
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden"
+            >
+              <div class="w-full h-[212px] md:h-[360px]">
+                <img
+                  class="rounded-[12px] w-full h-full object-center object-cover"
+                  src="/AirOne/assets/img/partners/meraas/landmark/NadAlShebaGardens.webp"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">Nad Al Sheba Gardens</h6>
+                <p class="text-[14px] md:text-[18px]">
+                  A suburban style gated community with townhouses and villas
+                  set around parks and landscaped spaces close to central Dubai.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Why -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-5 md:mb-7 font-medium text-[28px] md:text-[40px]">
+          Why Buyers and Investors Choose This Developer
+        </h3>
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7"
+        >
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 border-gradient-conic rounded-[8px]"
+          >
+            <img
+              class="h-12 md:h-20"
+              src="/AirOne/assets/img/partners/icons/1.svg"
+              alt=""
+            />
+            <p class="text-[14px] md:text-[16px]">
+              Visionary placemaking that combines residential living with
+              retail, leisure, and entertainment on a neighbourhood scale.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 border-gradient-conic rounded-[8px]"
+          >
+            <img
+              class="h-12 md:h-20"
+              src="/AirOne/assets/img/partners/icons/2.svg"
+              alt=""
+            />
+            <p class="text-[14px] md:text-[16px]">
+              Strategic locations in highly desirable districts with
+              connectivity to key urban centres and lifestyle nodes.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 border-gradient-conic rounded-[8px]"
+          >
+            <img
+              class="h-12 md:h-20"
+              src="/AirOne/assets/img/partners/icons/3.svg"
+              alt=""
+            />
+            <p class="text-[14px] md:text-[16px]">
+              Integrated community design emphasising walkability, green spaces,
+              and quality public realm.
+            </p>
+          </div>
+          <div
+            class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 border-gradient-conic rounded-[8px]"
+          >
+            <img
+              class="h-12 md:h-20"
+              src="/AirOne/assets/img/partners/icons/4.svg"
+              alt=""
+            />
+            <p class="text-[14px] md:text-[16px]">
+              Strong backing and financial stability as part of Dubai Holding
+              Real Estate, ensuring continuity and delivery confidence.
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- Partner Form + Area -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <div class="flex xl:flex-row flex-col md:justify-between gap-7">
+          <div class="shrink flex flex-col items-start gap-4 md:gap-8">
+            <h2 class="text-[20px] md:text-[28px]">Key Facts</h2>
+            <ul
+              class="flex flex-col items-start gap-3 ps-6 text-[16px] md:text-[24px] list-disc"
+            >
+              <li>Year founded: 2007</li>
+              <li>Headquarters: Dubai, United Arab Emirates</li>
+              <li>
+                Real estate segment: Residential, mixed use, destination based
+                communities, and retail integrated developments
+              </li>
+              <li>
+                Project locations: Key districts across Dubai including
+                Jumeirah, Al Wasl, Jumeirah Bay Island, Bluewaters, City Walk,
+                Nad Al Sheba, Dubailand and Dubai Design District
+              </li>
+              <li>
+                Current Focus Areas: Master planned lifestyle communities,
+                branded luxury residences, mixed use urban destinations,
+                waterfront living, and sustainable, experiential design
+                principles
+              </li>
+            </ul>
+          </div>
+          <!-- Form -->
+          <form
+            data-form
+            class="shrink-0 flex flex-col gap-5 md:gap-4 bg-[#1F2336] px-3 md:px-6 py-5 rounded-[16px] md:rounded-[20px] w-full xl:max-w-[750px] h-fit"
+          >
+            <div class="flex flex-col items-start gap-4">
+              <h5 class="text-[20px] md:text-[24px]">
+                Leave your contact details
+              </h5>
+              <p class="text-[14px] md:text-[16px]">
+                For a tailored selection of Meraas Properties opportunities,
+                current availability, pricing, and investment outlooks, request
+                a curated portfolio or consult with an authorised property
+                advisor today to explore options that align with your lifestyle
+                and financial goals.
+              </p>
+            </div>
+            <div
+              class="gap-x-5 gap-y-4 md:gap-y-8 grid grid-cols-1 lg:grid-cols-2"
+            >
+              <div class="input-wrapper">
+                <input
+                  data-name
+                  class="bg-[#FFFFFF52] px-4 md:px-5 py-3 md:py-4 rounded-[8px] focus-visible:outline-none text-[#FFFFFF] text-[16px] placeholder:text-[#E6E6E6] transition-all duration-200"
+                  type="text"
+                  placeholder="Name"
+                  oninput="
+                    this.value = this.value.replace(/[^A-Za-z\s\-]/g, '')
+                  "
+                  pattern="[A-Za-z\s\-]+"
+                />
+                <span class="input-error">
+                  Only Latin letters, spaces and hyphens allowed
+                </span>
+              </div>
+              <div class="input-wrapper">
+                <input
+                  data-phone
+                  class="bg-[#FFFFFF52] px-4 md:px-5 py-3 md:py-4 rounded-[8px] focus-visible:outline-none text-[#FFFFFF] text-[16px] placeholder:text-[#E6E6E6] transition-all duration-200"
+                  type="tel"
+                  placeholder="Phone"
+                  oninput="this.value = this.value.replace(/[^0-9+]/g, '')"
+                  pattern="[0-9+]+"
+                  inputmode="numeric"
+                />
+                <span class="input-error">
+                  Only numbers and plus sign allowed
+                </span>
+              </div>
+              <button
+                class="flex justify-center items-center lg:col-span-2 bg-gradient py-2 md:py-3 rounded-[8px] text-[#000624] text-[16px] md:text-[24px] text-center cursor-pointer"
+              >
+                Send Request
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <!-- Projects to Consider Now -->
+      <section class="mx-auto mt-11 md:mt-12 px-4 container">
+        <h3 class="mb-5 md:mb-7 font-medium text-[28px] md:text-[40px]">
+          Projects to Consider Now
+        </h3>
+        <div class="flex flex-col gap-4 w-full overflow-x-auto">
+          <div
+            class="flex flex-row gap-4 lg:grid lg:grid-cols-3 pb-2 w-max lg:w-full"
+          >
+            <div
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden max-w-[250px] md:max-w-[380px] lg:max-w-none"
+            >
+              <div class="w-full h-[212px] md:h-[360px]">
+                <img
+                  class="rounded-[12px] w-full h-full object-center object-cover"
+                  src="/AirOne/assets/img/partners/meraas/consider/BluewatersBay.webp"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">Bluewaters Bay</h6>
+                <p class="text-[14px] md:text-[18px]">
+                  Waterfront residences offering panoramic sea views and resort
+                  style amenities with Q1 2027 completion timelines.
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden max-w-[250px] md:max-w-[380px] lg:max-w-none"
+            >
+              <div class="w-full h-[212px] md:h-[360px]">
+                <img
+                  class="rounded-[12px] w-full h-full object-center object-cover"
+                  src="/AirOne/assets/img/partners/meraas/consider/JumeirahResidencesAsoraBay.webp"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">
+                  Jumeirah Residences Asora Bay
+                </h6>
+                <p class="text-[14px] md:text-[18px]">
+                  Ultra luxury beachfront homes on La Mer Peninsula with bespoke
+                  design and resident only facilities.
+                </p>
+              </div>
+            </div>
+            <div
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden max-w-[250px] md:max-w-[380px] lg:max-w-none"
+            >
+              <div class="w-full h-[212px] md:h-[360px]">
+                <img
+                  class="rounded-[12px] w-full h-full object-center object-cover"
+                  src="/AirOne/assets/img/partners/meraas/consider/DesignQuarterTowerA.webp"
+                  alt=""
+                />
+              </div>
+              <div class="flex flex-col items-start gap-3 md:gap-4">
+                <h6 class="text-[20px] md:text-[24px]">
+                  Design Quarter Tower A
+                </h6>
+                <p class="text-[14px] md:text-[18px]">
+                  Stylish urban apartments in the Dubai Design District with
+                  canal and city views.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer
+      class="mt-9 md:mt-12 bg-(--secondary) pt-4 md:pt-11 pb-7 md:pb-15 relative overflow-hidden"
+    >
+      <div class="mx-auto px-4 container">
+        <!-- BG Logo -->
+        <img
+          class="top-0 -left-20 absolute h-full pointer-events-none"
+          src="/AirOne/assets/img/logo-transparent.svg"
+          alt=""
+        />
+        <!-- Socials + Logo -->
+        <div class="flex justify-between items-start gap-10">
+          <div class="flex items-center gap-4 md:gap-5">
+            <a
+              class="hover:opacity-70 transition-all duration-300"
+              href="https://t.me/alexeevinvest"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/tg.svg"
+                alt="Telegram"
+              />
+            </a>
+            <a
+              class="flex items-end gap-1 hover:opacity-70 transition-all duration-300"
+              href="https://www.youtube.com/@Alexeevinvest"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+              <span class="text-[#969696] text-[12px]">(RU)</span>
+            </a>
+            <a
+              class="flex items-end gap-1 hover:opacity-70 transition-all duration-300"
+              href="https://www.youtube.com/@AirOneRealEstateinDubai"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/yt.svg"
+                alt="YouTube"
+              />
+              <span class="text-[#969696] text-[12px]">(EN)</span>
+            </a>
+            <a
+              class="hover:opacity-70 transition-all duration-300"
+              href="https://www.linkedin.com/company/110536617/"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <img
+                class="h-7 md:h-10"
+                src="/AirOne/assets/img/socials/linkedin.svg"
+                alt="LinkedIn"
+              />
+            </a>
+          </div>
+          <a href="/AirOne/">
+            <img
+              class="h-10 md:h-[68px]"
+              src="/AirOne/assets/img/logo.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <!-- Nav + Contacts -->
+        <div
+          class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
+        >
+          <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/"
+              >Home
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/team.html"
+              >Our Team
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/partners.html"
+              >Partners
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/documents.html"
+              >Documents
+            </a>
+            <a
+              class="hover:text-[#f4beb2] transition-all duration-300"
+              href="/AirOne/contacts.html"
+              >Contacts
+            </a>
+          </nav>
+          <div
+            class="flex md:flex-row flex-col flex-wrap md:justify-end gap-5 md:gap-x-11 md:gap-y-5 max-w-[212px] md:max-w-none h-fit"
+          >
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="mailto:info@airone-group.ae"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/mail.svg"
+                alt=""
+              />
+              info@airone-group.ae
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:+971549936988"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/phone.svg"
+                alt=""
+              />
+              +971 54 993 6988
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="tel:042383533"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/phone.svg"
+                alt=""
+              />
+              (04) 238 35 33
+            </a>
+            <a
+              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                class="h-5"
+                src="/AirOne/assets/img/contacts/map.svg"
+                alt=""
+              />
+              UAE, Dubai, Al Shafar Tower 1, 1006 office
+            </a>
+          </div>
+        </div>
+        <!-- Company -->
+        <p class="mt-20 md:mt-2.5 text-right">
+          Copyright © 2025-2026 Inside Dubai Estate. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Overlay + Burger -->
+    <div
+      id="burger-overlay"
+      class="hidden z-101 fixed inset-0 backdrop-blur-xs"
+    ></div>
+    <section
+      id="burger-menu"
+      class="fixed hidden right-0 top-0 h-dvh w-[60%] md:w-[30%] bg-(--secondary) z-102 flex-col gap-10 md:gap-15 justify-between py-8 leading-tight! text-[14px] md:text-[20px]"
+    >
+      <a class="px-4" href="/AirOne/">
+        <img class="h-7" src="/AirOne/assets/img/logo.svg" alt="Logo" />
+      </a>
+
+      <nav class="flex flex-col grow">
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/"
+        >
+          Home
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/team.html"
+        >
+          Our Team
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/partners.html"
+        >
+          Partners
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/documents.html"
+        >
+          Documents
+        </a>
+        <a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/contacts.html"
+        >
+          Contacts
+        </a>
+<a
+          class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
+          href="/AirOne/communities.html"
+        >
+          Comminities
+        </a>
+      </nav>
+    </section>
+
+    <div class="popover-overlay" id="successOverlay">
+      <div class="success-popover" id="successPopover">
+        <div class="popover-content">
+          <span class="font-medium text-[16px] md:text-[20px]">Success!</span>
+          <p class="opacity-80 text-[12px] md:text-[16px]">
+            Form submitted successfully!<br />Our specialist will contact you
+            soon.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script src="/AirOne/assets/js/burger.js"></script>
+    <script src="/AirOne/assets/js/form.js" type="module"></script>
+  </body>
+</html>

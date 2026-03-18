@@ -1,0 +1,12 @@
+@font-face {
+  font-family: Avenir Next World;
+  src: url("../fonts/Avenir_Next_World_Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Avenir Next World;
+  src: url("../fonts/Avenir_Next_World_Demi_Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
