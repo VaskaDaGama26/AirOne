@@ -1,0 +1,46 @@
+#map {
+  width: 100%;
+  max-width: 1400px;
+  height: auto;
+  min-height: 500px;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  margin-inline: auto;
+  cursor: pointer;
+}
+.hover-tooltip {
+  position: absolute;
+  background: var(--primary);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  pointer-events: none;
+  z-index: 3;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.hover-tooltip__content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.popup-tooltip {
+  position: absolute;
+  background: #00041a;
+  color: var(--white);
+  padding: 16px;
+  border-radius: 12px;
+  font-size: 13px;
+  max-width: 280px;
+  min-width: 200px;
+  z-index: 4;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--accent);
+  pointer-events: auto;
+  cursor: pointer;
+}

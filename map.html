@@ -1,15 +1,11 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="ru">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contacts | AIR One Real Estate</title>
+    <title>AIR One Real Estate</title>
 
-    <link
-      rel="icon"
-      href="assets/img/favicon.svg"
-      type="image/svg+xml"
-    />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
 
     <!-- Preload Fonts -->
     <link
@@ -28,182 +24,51 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/map.css" />
 
     <script src="assets/js/vendor/tw.js"></script>
   </head>
-  <body>
-    <!-- Bg Lights -->
-    <div class="-z-1 fixed inset-0 overflow-hidden pointer-events-none">
-      <div class="relative w-full h-full">
-        <div
-          class="absolute blur-circle"
-          style="width: 220px; height: 220px; right: 0; top: 200px"
-        ></div>
-      </div>
+  <!-- Bg Lights -->
+  <div class="-z-1 fixed inset-0 overflow-hidden pointer-events-none">
+    <div class="relative w-full h-full">
+      <div
+        class="absolute blur-circle"
+        style="width: 420px; height: 420px; left: 0px; top: 700px"
+      ></div>
+      <div
+        class="absolute blur-circle"
+        style="width: 300px; height: 300px; right: 0px; top: 1200px"
+      ></div>
     </div>
-    <!-- Header -->
-    <header class="sticky top-0 bg-(--primary) z-100">
-      <div class="flex justify-between mx-auto px-4 py-5 container">
-        <a href="/AirOne/">
-          <img class="h-7 lg:h-12" src="assets/img/logo.svg" alt="" />
-        </a>
-        <nav class="hidden lg:flex items-center gap-8 text-[16px]">
-          <a class="p-2 text-gradient" href="/AirOne/">Home</a>
-          <a class="p-2 text-gradient" href="/AirOne/team.html">Our Team</a>
-          <a class="p-2 text-gradient" href="/AirOne/partners.html">Partners</a>
-          <a class="p-2 text-gradient" href="/AirOne/documents.html"
-            >Documents</a
-          >
-          <a
-            class="p-2 border-b border-b-[#F8C4B8] text-gradient"
-            href="/AirOne/contacts.html"
-            >Contacts</a
-          >
-          <a
-            class="p-2 text-gradient"
-            href="/AirOne/communities.html"
-            >Communities</a
-          >
-        </nav>
-        <button class="lg:hidden block cursor-pointer" id="burger">
-          <img src="assets/img/icons/burger.svg" alt="" />
-        </button>
-      </div>
-    </header>
+  </div>
+  <!-- Header -->
+  <header class="sticky top-0 bg-(--primary) z-100">
+    <div class="flex justify-between mx-auto px-4 py-5 container">
+      <a href="/AirOne/">
+        <img class="h-7 lg:h-12" src="assets/img/logo.svg" alt="" />
+      </a>
+      <nav class="hidden lg:flex items-center gap-8 text-[16px]">
+        <a class="p-2 border-b border-b-[#F8C4B8] text-gradient" href="/AirOne/"
+          >Home</a
+        >
+        <a class="p-2 text-gradient" href="/AirOne/team.html">Our Team</a>
+        <a class="p-2 text-gradient" href="/AirOne/partners.html">Partners</a>
+        <a class="p-2 text-gradient" href="/AirOne/documents.html">Documents</a>
+        <a class="p-2 text-gradient" href="/AirOne/contacts.html">Contacts</a>
+        <a class="p-2 text-gradient" href="/AirOne/communities.html"
+          >Communities</a
+        >
+      </nav>
+      <button class="lg:hidden block cursor-pointer" id="burger">
+        <img src="assets/img/icons/burger.svg" alt="" />
+      </button>
+    </div>
+  </header>
+  <body>
     <main>
-      <section class="mx-auto mt-11 md:mt-12 px-4 container">
-        <h3 class="mb-5 md:mb-7 font-medium text-[28px] md:text-[40px]">
-          Contacts
-        </h3>
-        <div class="gap-6 md:gap-7 grid grid-cols-1 md:grid-cols-2">
-          <picture>
-            <source
-              media="(min-width: 769px)"
-              srcset="assets/img/banners/contacts.webp"
-            />
-            <img
-              class="rounded-[12px] w-full"
-              src="assets/img/banners/contacts-mobile.webp"
-              alt=""
-            />
-          </picture>
-          <div class="flex flex-col gap-5 md:gap-x-11 md:gap-y-5 w-full h-fit">
-            <a
-              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[--accent] transition-all duration-300"
-              href="mailto:info@airone-group.ae"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="h-6"
-                src="assets/img/contacts/mail.svg"
-                alt=""
-              />
-              info@airone-group.ae
-            </a>
-            <a
-              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[--accent] transition-all duration-300"
-              href="tel:+971549936988"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="h-6"
-                src="assets/img/contacts/phone.svg"
-                alt=""
-              />
-              +971 54 993 6988
-            </a>
-            <a
-              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[--accent] transition-all duration-300"
-              href="tel:042383533"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="h-6"
-                src="assets/img/contacts/phone.svg"
-                alt=""
-              />
-              (04) 238 35 33
-            </a>
-            <a
-              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[--accent] transition-all duration-300"
-              href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <img
-                class="h-6"
-                src="assets/img/contacts/map.svg"
-                alt=""
-              />
-              UAE, Dubai, Al Shafar Tower 1, 1006 office
-            </a>
-            <p class="flex items-center gap-3 text-[16px] md:text-[20px]">
-              <img
-                class="h-6"
-                src="assets/img/contacts/time.svg"
-                alt=""
-              />
-              Mon — Sun: 8:00 AM – 8:00 PM
-            </p>
-            <div class="flex items-center gap-4 md:gap-5">
-              <a
-                class="hover:opacity-70 transition-all duration-300"
-                href="https://t.me/alexeevinvest"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  class="h-7 md:h-10"
-                  src="assets/img/socials/tg.svg"
-                  alt="Telegram"
-                />
-              </a>
-              <a
-                class="flex items-end gap-1 hover:opacity-70 transition-all duration-300"
-                href="https://www.youtube.com/@Alexeevinvest"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  class="h-7 md:h-10"
-                  src="assets/img/socials/yt.svg"
-                  alt="YouTube"
-                />
-                <span class="text-[#969696] text-[12px]">(RU)</span>
-              </a>
-              <a
-                class="flex items-end gap-1 hover:opacity-70 transition-all duration-300"
-                href="https://www.youtube.com/@AirOneRealEstateinDubai"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  class="h-7 md:h-10"
-                  src="assets/img/socials/yt.svg"
-                  alt="YouTube"
-                />
-                <span class="text-[#969696] text-[12px]">(EN)</span>
-              </a>
-              <a
-                class="hover:opacity-70 transition-all duration-300"
-                href="https://www.linkedin.com/company/110536617/"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                <img
-                  class="h-7 md:h-10"
-                  src="assets/img/socials/linkedin.svg"
-                  alt="LinkedIn"
-                />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div id="map"></div>
     </main>
+
     <footer
       class="mt-9 md:mt-12 bg-(--secondary) pt-4 md:pt-11 pb-7 md:pb-15 relative overflow-hidden"
     >
@@ -269,11 +134,7 @@
             </a>
           </div>
           <a href="/AirOne/">
-            <img
-              class="h-10 md:h-[68px]"
-              src="assets/img/logo.svg"
-              alt=""
-            />
+            <img class="h-10 md:h-[68px]" src="assets/img/logo.svg" alt="" />
           </a>
         </div>
         <!-- Nav + Contacts -->
@@ -316,11 +177,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                class="h-5"
-                src="assets/img/contacts/mail.svg"
-                alt=""
-              />
+              <img class="h-5" src="assets/img/contacts/mail.svg" alt="" />
               info@airone-group.ae
             </a>
             <a
@@ -329,11 +186,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                class="h-5"
-                src="assets/img/contacts/phone.svg"
-                alt=""
-              />
+              <img class="h-5" src="assets/img/contacts/phone.svg" alt="" />
               +971 54 993 6988
             </a>
             <a
@@ -342,11 +195,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                class="h-5"
-                src="assets/img/contacts/phone.svg"
-                alt=""
-              />
+              <img class="h-5" src="assets/img/contacts/phone.svg" alt="" />
               (04) 238 35 33
             </a>
             <a
@@ -355,11 +204,7 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <img
-                class="h-5"
-                src="assets/img/contacts/map.svg"
-                alt=""
-              />
+              <img class="h-5" src="assets/img/contacts/map.svg" alt="" />
               UAE, Dubai, Al Shafar Tower 1, 1006 office
             </a>
           </div>
@@ -415,7 +260,7 @@
         >
           Contacts
         </a>
-<a
+        <a
           class="px-4 py-3 border-b border-b-[#F8C4B847] text-gradient"
           href="/AirOne/communities.html"
         >
@@ -425,5 +270,7 @@
     </section>
 
     <script src="assets/js/burger.js"></script>
+    <script src="assets/js/vendor/d3.js"></script>
+    <script src="assets/js/map/script.js" type="module"></script>
   </body>
 </html>
