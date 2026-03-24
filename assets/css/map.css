@@ -1,46 +1,166 @@
+/* ── Map container ── */
 #map {
   width: 100%;
-  max-width: 1400px;
-  height: auto;
-  min-height: 500px;
-  aspect-ratio: 16 / 10;
+  height: 60vh;
+  min-height: 480px;
   border-radius: 12px;
-  margin-inline: auto;
-  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
 }
-.hover-tooltip {
-  position: absolute;
-  background: var(--primary);
-  color: white;
-  padding: 8px 12px;
-  border-radius: 6px;
-  font-size: 14px;
-  font-weight: 500;
+
+/* ── Override Leaflet attribution ── */
+.leaflet-control-attribution {
+  background: rgba(20, 22, 38, 0.7) !important;
+  color: #666 !important;
+  font-size: 10px !important;
+}
+.leaflet-control-attribution a {
+  color: #888 !important;
+}
+
+/* ── Zoom controls ── */
+.leaflet-control-zoom a {
+  background: #1f2336 !important;
+  color: #ffdcd4 !important;
+  border-color: #2e3454 !important;
+  transition: background 0.2s;
+}
+.leaflet-control-zoom a:hover {
+  background: #2e3454 !important;
+  color: #fff !important;
+}
+
+/* ── Hover tooltip ── */
+.map-hover-tooltip {
+  position: fixed;
+  z-index: 9999;
   pointer-events: none;
-  z-index: 3;
-  white-space: nowrap;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(4px);
-}
-
-.hover-tooltip__content {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.popup-tooltip {
-  position: absolute;
-  background: #00041a;
-  color: var(--white);
-  padding: 16px;
-  border-radius: 12px;
+  background: rgba(20, 22, 38, 0.92);
+  border: 1px solid rgba(255, 220, 212, 0.25);
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-family: inherit;
   font-size: 13px;
-  max-width: 280px;
-  min-width: 200px;
-  z-index: 4;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-  border: 1px solid var(--accent);
-  pointer-events: auto;
-  cursor: pointer;
+  color: #f0e8e4;
+  white-space: nowrap;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+.map-hover-tooltip .pin {
+  margin-right: 4px;
+}
+.map-hover-tooltip .hint {
+  margin-left: 8px;
+  font-size: 11px;
+  opacity: 0.55;
+}
+
+/* ── Detail popup (Leaflet popup override) ── */
+.map-detail-popup .leaflet-popup-content-wrapper {
+  background: rgba(18, 20, 34, 0.97);
+  border: 1px solid rgba(255, 220, 212, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+  padding: 0;
+  overflow: hidden;
+  backdrop-filter: blur(12px);
+  color: #e0d8d4;
+  font-family: inherit;
+}
+
+.map-detail-popup .leaflet-popup-content {
+  margin: 0;
+  width: 300px !important;
+}
+
+.map-detail-popup .leaflet-popup-tip-container {
+  display: none;
+}
+
+.map-detail-popup .leaflet-popup-close-button {
+  color: #888 !important;
+  font-size: 18px !important;
+  top: 10px !important;
+  right: 12px !important;
+  transition: color 0.15s;
+}
+.map-detail-popup .leaflet-popup-close-button:hover {
+  color: #fff !important;
+}
+
+.popup-inner {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-header {
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffdcd4;
+  padding: 14px 36px 12px 16px;
+  border-bottom: 1px solid rgba(255, 220, 212, 0.12);
+  letter-spacing: 0.01em;
+}
+
+.popup-body {
+  padding: 12px 16px;
+  max-height: 320px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #2e3454 transparent;
+}
+
+.popup-body p {
+  margin: 0 0 10px;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #c8c0bc;
+}
+.popup-body p:last-child {
+  margin-bottom: 0;
+}
+
+.popup-section {
+  margin-top: 10px;
+}
+.popup-section strong {
+  display: block;
+  font-size: 12px;
+  color: #ffdcd4;
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+.popup-section ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.popup-section ul li {
+  font-size: 12px;
+  color: #b0a8a4;
+  padding: 2px 0 2px 14px;
+  position: relative;
+  line-height: 1.5;
+}
+.popup-section ul li::before {
+  content: "•";
+  position: absolute;
+  left: 2px;
+  color: #f8c4b8;
+  opacity: 0.6;
+}
+
+.popup-footer {
+  font-size: 10px;
+  color: #555;
+  text-align: center;
+  padding: 8px 0;
+  border-top: 1px solid rgba(255, 220, 212, 0.08);
+}
+
+.popup-image {
+  margin-bottom: 16px;
+  border-radius: 8px;
+  object-fit: cover;
 }

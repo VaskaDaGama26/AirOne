@@ -1443,6 +1443,7 @@ export const geojson = {
           "development of new coastal projects",
         ],
         developers: ["Ajman Real Estate Company", "Aqaar", "Sweet Homes Group"],
+        img: "assets/img/emirates/Ajman.webp",
       },
       geometry: {
         type: "MultiPolygon",
@@ -1475,6 +1476,7 @@ export const geojson = {
           "Meraas",
           "Dubai Properties",
         ],
+        img: "assets/img/emirates/Dubai.webp",
       },
       geometry: {
         type: "MultiPolygon",
@@ -1496,6 +1498,7 @@ export const geojson = {
           "stable real estate market",
         ],
         developers: ["Aldar Properties", "Modon", "Bloom Holding", "Imkan"],
+        img: "assets/img/emirates/AbuDhabi.webp",
       },
       geometry: {
         type: "MultiPolygon",
@@ -1505,7 +1508,7 @@ export const geojson = {
     {
       type: "Feature",
       properties: {
-        name: "Um Al Quwain",
+        name: "Umm Al Quwain",
         description: [
           "Umm Al Quwain is one of the most peaceful and least populated emirates in the UAE. It is located between Sharjah and Ras Al Khaimah and is known for its natural landscapes, lagoons, and coastal areas.",
           "The emirate maintains a more traditional atmosphere and a slower pace of life. It is home to mangrove forests, wildlife reserves, and scenic coastal zones.",
@@ -1518,6 +1521,7 @@ export const geojson = {
           "more affordable property prices",
         ],
         developers: ["Sobha Realty and several local development companies"],
+        img: "assets/img/emirates/UmmAlQuwain.webp",
       },
       geometry: {
         type: "MultiPolygon",
@@ -1539,6 +1543,7 @@ export const geojson = {
           "more affordable property prices compared to Dubai",
         ],
         developers: ["RAK Properties", "Marjan", "Al Hamra", "Eagle Hills"],
+        img: "assets/img/emirates/RasAlKhaimah.webp",
       },
       geometry: {
         type: "MultiPolygon",
@@ -1568,6 +1573,7 @@ export const geojson = {
           "Fujairah National Group",
           "MAG Group",
         ],
+        img: "assets/img/emirates/Fujairah.webp",
       },
       geometry: {
         type: "MultiPolygon",
@@ -1590,6 +1596,7 @@ export const geojson = {
         ],
         why: ["more affordable property prices", "close proximity to Dubai"],
         developers: ["Arada", "Alef Group", "Eagle Hills Sharjah"],
+        img: "assets/img/emirates/Sharjah.webp",
       },
       geometry: {
         type: "MultiPolygon",

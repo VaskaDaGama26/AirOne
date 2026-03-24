@@ -1,312 +1,193 @@
 import { geojson } from "./data.js";
 
-let svg, path, projection, width, height;
-let centerLon, centerLat, minLon, maxLon, minLat, maxLat;
-let activeTooltip = null;
+let map = null;
 let activePopup = null;
 
-function calculateBounds() {
-  const allPoints = [];
-  geojson.features.forEach((feature) => {
-    const coords = feature.geometry.coordinates;
-    if (feature.geometry.type === "Polygon") {
-      allPoints.push(...coords[0]);
-    } else if (feature.geometry.type === "MultiPolygon") {
-      coords.forEach((poly) => allPoints.push(...poly[0]));
-    }
-  });
+// Цвета для каждого эмирата
+const emirateColors = {
+  Dubai: { fill: "#e87c5a", stroke: "#f0a882" },
+  "Abu Dhabi": { fill: "#5a7ce8", stroke: "#82a0f0" },
+  Sharjah: { fill: "#5ae8a0", stroke: "#82f0c0" },
+  Ajman: { fill: "#e8c55a", stroke: "#f0d882" },
+  "Ras Al Khaimah": { fill: "#c55ae8", stroke: "#d882f0" },
+  Fujairah: { fill: "#5ac5e8", stroke: "#82d8f0" },
+  "Umm Al Quwain": { fill: "#e85a7c", stroke: "#f082a0" },
+};
 
-  const lons = allPoints.map((p) => p[0]);
-  const lats = allPoints.map((p) => p[1]);
-  minLon = Math.min(...lons);
-  maxLon = Math.max(...lons);
-  minLat = Math.min(...lats);
-  maxLat = Math.max(...lats);
-  centerLon = (minLon + maxLon) / 2;
-  centerLat = (minLat + maxLat) / 2;
+function getColor(name) {
+  return emirateColors[name] || { fill: "#7c8db0", stroke: "#a0b0cc" };
 }
 
-function calculateScale(width, height) {
-  const padding = 50;
-  const tempProj = d3
-    .geoEquirectangular()
-    .center([centerLon, centerLat])
-    .translate([width / 2, height / 2]);
+function initMap() {
+  // Центр UAE
+  map = L.map("map", {
+    center: [24.4, 54.6],
+    zoom: 7,
+    zoomControl: true,
+    attributionControl: true,
+  });
 
-  const topLeft = tempProj([minLon, maxLat]);
-  const bottomRight = tempProj([maxLon, minLat]);
+  // CartoDB Dark Matter tiles
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png", {
+    attribution:
+      '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
+    subdomains: "abcd",
+    maxZoom: 19,
+  }).addTo(map);
 
-  if (
-    topLeft &&
-    bottomRight &&
-    isFinite(topLeft[0]) &&
-    isFinite(bottomRight[0])
-  ) {
-    const scaleX =
-      (width - 2 * padding) / Math.abs(bottomRight[0] - topLeft[0]);
-    const scaleY =
-      (height - 2 * padding) / Math.abs(bottomRight[1] - topLeft[1]);
-    if (window.innerWidth >= 769) {
-      return Math.min(scaleX, scaleY) * 150;
-    }
-    return Math.min(scaleX, scaleY) * 175;
-  }
-  return 50000;
+  // Рисуем GeoJSON поверх тайлов
+  L.geoJSON(geojson, {
+    style: function (feature) {
+      const name = feature.properties.name;
+      const colors = getColor(name);
+      return {
+        fillColor: colors.fill,
+        fillOpacity: 0.35,
+        color: colors.stroke,
+        weight: 1.5,
+        opacity: 0.7,
+      };
+    },
+    onEachFeature: function (feature, layer) {
+      const name = feature.properties.name;
+      const colors = getColor(name);
+
+      // Hover
+      layer.on("mouseover", function (e) {
+        layer.setStyle({
+          fillOpacity: 0.6,
+          weight: 2.5,
+          color: "#ffffff",
+        });
+
+        showHoverTooltip(e.originalEvent, name);
+      });
+
+      layer.on("mousemove", function (e) {
+        moveHoverTooltip(e.originalEvent);
+      });
+
+      layer.on("mouseout", function () {
+        layer.setStyle({
+          fillColor: colors.fill,
+          fillOpacity: 0.35,
+          color: colors.stroke,
+          weight: 1.5,
+          opacity: 0.7,
+        });
+        hideHoverTooltip();
+      });
+
+      // Click — детальный попап
+      layer.on("click", function (e) {
+        L.DomEvent.stopPropagation(e);
+        showDetailPopup(e.latlng, feature.properties);
+      });
+    },
+  }).addTo(map);
+
+  // Клик по карте — закрываем попап
+  map.on("click", function () {
+    hideDetailPopup();
+  });
+}
+
+/* ── Hover tooltip ── */
+let hoverEl = null;
+
+function showHoverTooltip(event, name) {
+  hideHoverTooltip();
+  hoverEl = document.createElement("div");
+  hoverEl.className = "map-hover-tooltip";
+  hoverEl.innerHTML = `<span class="pin">📍</span> <strong>${name}</strong> <span class="hint">click for details</span>`;
+  document.body.appendChild(hoverEl);
+  positionTooltip(hoverEl, event, 180, 44);
+}
+
+function moveHoverTooltip(event) {
+  if (hoverEl) positionTooltip(hoverEl, event, 180, 44);
 }
 
 function hideHoverTooltip() {
-  if (activeTooltip) {
-    activeTooltip.remove();
-    activeTooltip = null;
+  if (hoverEl) {
+    hoverEl.remove();
+    hoverEl = null;
   }
 }
 
-function hidePopup() {
+/* ── Detail popup ── */
+function showDetailPopup(latlng, props) {
+  hideDetailPopup();
+
+  const name = props.name || "";
+  const description = props.description || [];
+  const why = props.why || [];
+  const developers = props.developers || [];
+  const img = props.img ? `<img class="popup-image" src="${props.img}" />` : "";
+
+  const descHTML = description.length
+    ? description.map((d) => `<p>${d}</p>`).join("")
+    : "";
+
+  const whyHTML = why.length
+    ? `<div class="popup-section"><strong>Why investors choose ${name}:</strong><ul>${why
+        .map((i) => `<li>${i}</li>`)
+        .join("")}</ul></div>`
+    : "";
+
+  const devHTML = developers.length
+    ? `<div class="popup-section"><strong>Major developers:</strong><ul>${developers
+        .map((i) => `<li>${i}</li>`)
+        .join("")}</ul></div>`
+    : "";
+
+  const popup = L.popup({
+    maxWidth: 320,
+    className: "map-detail-popup",
+    closeButton: true,
+    autoClose: true,
+    closeOnEscapeKey: true,
+  })
+    .setLatLng(latlng)
+    .setContent(
+      `
+      <div class="popup-inner">
+        <div class="popup-header">📍 ${name}</div>
+        <div class="popup-body">
+          ${img}
+          ${descHTML}
+          ${devHTML}
+          ${whyHTML}
+        </div>
+        <div class="popup-footer">click map to close</div>
+      </div>
+    `,
+    )
+    .addTo(map);
+
+  activePopup = popup;
+}
+
+function hideDetailPopup() {
   if (activePopup) {
     activePopup.remove();
     activePopup = null;
   }
 }
 
-function showHoverTooltip(event, feature) {
-  hideHoverTooltip();
-
-  const name = feature.properties.name || feature.properties.Emirate;
-
-  const tooltipWidth = 180;
-  const tooltipHeight = 50;
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
-
+/* ── Utils ── */
+function positionTooltip(el, event, w, h) {
+  const ww = window.innerWidth;
+  const wh = window.innerHeight;
   let left = event.pageX + 15;
   let top = event.pageY - 40;
-
-  if (left + tooltipWidth > windowWidth) {
-    left = event.pageX - tooltipWidth - 15;
-  }
+  if (left + w > ww) left = event.pageX - w - 15;
   if (left < 0) left = 10;
-
-  if (top + tooltipHeight > windowHeight) {
-    top = event.pageY - tooltipHeight - 10;
-  }
+  if (top + h > wh) top = event.pageY - h - 10;
   if (top < 0) top = 10;
-
-  activeTooltip = d3
-    .select("body")
-    .append("div")
-    .attr("class", "hover-tooltip")
-    .style("left", left + "px")
-    .style("top", top + "px").html(`
-      <div class="hover-tooltip__content">
-        <span>📍</span>
-        <span><strong>${name}</strong></span>
-        <span style="font-size: 12px; opacity: 0.8;">(click for details)</span>
-      </div>
-    `);
+  el.style.left = left + "px";
+  el.style.top = top + "px";
 }
 
-function showPopup(event, feature) {
-  hidePopup();
-  hideHoverTooltip();
-
-  const tooltipWidth = 280;
-  const tooltipHeight = 200;
-  const windowWidth = window.innerWidth;
-  const windowHeight = window.innerHeight;
-
-  let left = event.pageX + 15;
-  let top = event.pageY - 40;
-
-  if (left + tooltipWidth > windowWidth) {
-    left = event.pageX - tooltipWidth - 15;
-  }
-  if (left < 0) left = 10;
-
-  if (top + tooltipHeight > windowHeight) {
-    top = event.pageY - tooltipHeight - 10;
-  }
-  if (top < 0) top = 10;
-
-  const name = feature.properties.name || feature.properties.Emirate;
-  const description =
-    feature.properties.description && feature.properties.description !== null
-      ? `<div style="margin-top: 10px;">
-      ${feature.properties.description
-        .map((item) => `<span>${item}</span><br><br>`)
-        .join("")}
-      </div>`
-      : "";
-
-  const why =
-    feature.properties.why && feature.properties.why.length
-      ? `
-    <div style="margin-top: 10px;">
-      <strong>Why investors choose ${name}:</strong>
-      <ul style="margin: 8px 0 0 8px; padding: 0;">
-        ${feature.properties.why
-          .map((item) => `<li style="margin: 4px 0;">• ${item}</li>`)
-          .join("")}
-      </ul>
-    </div>`
-      : "";
-
-  const developers =
-    feature.properties.developers && feature.properties.developers.length
-      ? `
-    <div style="margin-top: 10px;">
-      <strong>Major developers:</strong>
-      <ul style="margin: 8px 0 0 8px; padding: 0;">
-        ${feature.properties.developers
-          .map((item) => `<li style="margin: 4px 0;">• ${item}</li>`)
-          .join("")}
-      </ul>
-    </div>`
-      : "";
-
-  // Создаем детальный поповер
-  activePopup = d3
-    .select("body")
-    .append("div")
-    .attr("class", "popup-tooltip")
-    .style("left", left + "px")
-    .style("top", top + "px")
-    .html(`
-      <div style="position: relative;">
-        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-          <strong>📍 ${name}</strong>
-          <button 
-            onclick="this.parentElement.parentElement.parentElement.remove(); activePopup = null;"
-            style="background: none; border: none; font-size: 18px; cursor: pointer; color: #999; padding: 0 4px;"
-            onmouseover="this.style.color='#666'"
-            onmouseout="this.style.color='#999'"
-          >✕</button>
-        </div>
-        ${description}
-        ${developers}
-        ${why}
-        <div style="margin-top: 12px; font-size: 11px; color: #999; border-top: 1px solid #ffdcd4; padding-top: 8px; text-align: center;">
-          click anywhere to close
-        </div>
-      </div>
-    `);
-}
-
-function drawMap() {
-  const container = document.getElementById("map").getBoundingClientRect();
-  width = container.width;
-  height = container.height;
-
-  if (!svg) {
-    svg = d3.select("#map").append("svg").style("border-radius", "12px");
-  }
-
-  svg.attr("width", width).attr("height", height);
-
-  const scale = calculateScale(width, height);
-
-  projection = d3
-    .geoEquirectangular()
-    .center([centerLon, centerLat])
-    .scale(scale)
-    .translate([width / 2, height / 2]);
-
-  path = d3.geoPath().projection(projection);
-
-  svg.selectAll("path").remove();
-
-  geojson.features.forEach((feature) => {
-    const color =
-      feature.properties.fill || feature.properties.stroke || "#1f2336";
-
-    svg
-      .append("path")
-      .datum(feature)
-      .attr("d", path)
-      .attr("fill", color)
-      .attr("fill-opacity", 0.65)
-      .attr("stroke-width", 1)
-      .attr("stroke", "#252b48")
-      .style("cursor", "pointer")
-      .style("z-index", "1")
-      .style("transition", "all 0.2s")
-      .on("mouseenter", function (event, d) {
-        d3.select(this)
-          .attr("stroke-width", 2.5)
-          .attr("stroke", "#ffdcd4")
-          .attr("fill-opacity", 0.85)
-          .style("z-index", "10");
-
-        showHoverTooltip(event, d);
-      })
-      .on("mousemove", function (event, d) {
-        if (activeTooltip) {
-          const tooltipWidth = 180;
-          const tooltipHeight = 50;
-          const windowWidth = window.innerWidth;
-          const windowHeight = window.innerHeight;
-
-          let left = event.pageX + 15;
-          let top = event.pageY - 40;
-
-          if (left + tooltipWidth > windowWidth) {
-            left = event.pageX - tooltipWidth - 15;
-          }
-          if (left < 0) left = 10;
-
-          if (top + tooltipHeight > windowHeight) {
-            top = event.pageY - tooltipHeight - 10;
-          }
-          if (top < 0) top = 10;
-
-          activeTooltip.style("left", left + "px").style("top", top + "px");
-        }
-      })
-      .on("mouseleave", function () {
-        d3.select(this)
-          .attr("stroke-width", 1)
-          .attr("stroke", "#252b48")
-          .attr("fill-opacity", 0.65)
-          .style("z-index", "1");
-
-        hideHoverTooltip();
-      })
-      .on("click", function (event, d) {
-        event.stopPropagation();
-        // Показываем детальный поповер
-        showPopup(event, d);
-      });
-  });
-
-  svg.on("click", function (event) {
-    if (event.target === svg.node()) {
-      hidePopup();
-      hideHoverTooltip();
-    }
-  });
-}
-
-function handleResize() {
-  if (geojson.features.length === 0) return;
-  drawMap();
-}
-
-if (geojson.features.length > 0) {
-  calculateBounds();
-  drawMap();
-  window.addEventListener("resize", handleResize);
-}
-
-document.body.addEventListener("click", function (event) {
-  if (
-    !event.target.closest(".popup-tooltip") &&
-    !event.target.closest("path")
-  ) {
-    hidePopup();
-  }
-});
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape") {
-    hidePopup();
-  }
-});
+/* ── Init ── */
+initMap();
