@@ -31,22 +31,22 @@
     <link rel="stylesheet" href="/AirOne/assets/css/popover.css" />
     <link rel="stylesheet" href="/AirOne/assets/css/input.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="assets/js/vendor/tw.js"></script>
   </head>
   <body>
     <!-- Bg Lights -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-1">
+    <div class="-z-1 fixed inset-0 overflow-hidden pointer-events-none">
       <div class="relative w-full h-full">
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 250px; height: 250px; right: 0; top: 200px"
         ></div>
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 420px; height: 420px; left: 0px; top: 700px"
         ></div>
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 300px; height: 300px; right: 0px; top: 1600px"
         ></div>
       </div>
@@ -143,7 +143,7 @@
           Landmark Projects
         </h3>
         <div class="flex flex-col gap-4 w-full overflow-x-auto">
-          <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+          <div class="gap-4 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4">
             <div
               class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden"
             >
@@ -229,7 +229,7 @@
           Why Buyers and Investors Choose This Developer
         </h3>
         <div
-          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-7"
+          class="gap-6 md:gap-7 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
         >
           <div
             class="flex flex-col items-start gap-4 md:gap-8 p-2 md:p-4 border-gradient-conic rounded-[8px]"
@@ -288,7 +288,7 @@
       <!-- Partner Form + Area -->
       <section class="mx-auto mt-11 md:mt-12 px-4 container">
         <div class="flex xl:flex-row flex-col md:justify-between gap-7">
-          <div class="shrink flex flex-col items-start gap-4 md:gap-8">
+          <div class="flex flex-col items-start gap-4 md:gap-8 shrink">
             <h2 class="text-[20px] md:text-[28px]">Key Facts</h2>
             <ul
               class="flex flex-col items-start gap-3 ps-6 text-[16px] md:text-[24px] list-disc"
@@ -315,7 +315,7 @@
           <!-- Form -->
           <form
             data-form
-            class="shrink-0 flex flex-col gap-5 md:gap-4 bg-[#1F2336] px-3 md:px-6 py-5 rounded-[16px] md:rounded-[20px] w-full xl:max-w-[750px] h-fit"
+            class="flex flex-col gap-5 md:gap-4 bg-[#1F2336] px-3 md:px-6 py-5 rounded-[16px] md:rounded-[20px] w-full xl:max-w-[750px] h-fit shrink-0"
           >
             <div class="flex flex-col items-start gap-4">
               <h5 class="text-[20px] md:text-[24px]">
@@ -335,7 +335,7 @@
               <div class="input-wrapper">
                 <input
                   data-name
-                  class="bg-[#FFFFFF52] px-4 md:px-5 py-3 md:py-4 rounded-[8px] focus-visible:outline-none text-[#FFFFFF] text-[16px] placeholder:text-[#E6E6E6] transition-all duration-200"
+                  class="bg-[#FFFFFF52] px-4 md:px-5 py-3 md:py-4 rounded-[8px] focus-visible:outline-none text-[--white] text-[16px] placeholder:text-[#E6E6E6] transition-all duration-200"
                   type="text"
                   placeholder="Name"
                   oninput="
@@ -350,7 +350,7 @@
               <div class="input-wrapper">
                 <input
                   data-phone
-                  class="bg-[#FFFFFF52] px-4 md:px-5 py-3 md:py-4 rounded-[8px] focus-visible:outline-none text-[#FFFFFF] text-[16px] placeholder:text-[#E6E6E6] transition-all duration-200"
+                  class="bg-[#FFFFFF52] px-4 md:px-5 py-3 md:py-4 rounded-[8px] focus-visible:outline-none text-[--white] text-[16px] placeholder:text-[#E6E6E6] transition-all duration-200"
                   type="tel"
                   placeholder="Phone"
                   oninput="this.value = this.value.replace(/[^0-9+]/g, '')"
@@ -380,7 +380,7 @@
             class="flex flex-row gap-4 lg:grid lg:grid-cols-3 pb-2 w-max lg:w-full"
           >
             <div
-              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden max-w-[250px] md:max-w-[380px] lg:max-w-none"
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full max-w-[250px] md:max-w-[380px] lg:max-w-none overflow-hidden"
             >
               <div class="w-full h-[212px] md:h-[360px]">
                 <img
@@ -399,7 +399,7 @@
               </div>
             </div>
             <div
-              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden max-w-[250px] md:max-w-[380px] lg:max-w-none"
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full max-w-[250px] md:max-w-[380px] lg:max-w-none overflow-hidden"
             >
               <div class="w-full h-[212px] md:h-[360px]">
                 <img
@@ -418,7 +418,7 @@
               </div>
             </div>
             <div
-              class="relative flex flex-col items-start gap-5 md:gap-8 w-full overflow-hidden max-w-[250px] md:max-w-[380px] lg:max-w-none"
+              class="relative flex flex-col items-start gap-5 md:gap-8 w-full max-w-[250px] md:max-w-[380px] lg:max-w-none overflow-hidden"
             >
               <div class="w-full h-[212px] md:h-[360px]">
                 <img
@@ -517,27 +517,27 @@
         >
           <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/"
               >Home
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/team.html"
               >Our Team
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/partners.html"
               >Partners
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/documents.html"
               >Documents
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/contacts.html"
               >Contacts
             </a>
@@ -546,7 +546,7 @@
             class="flex md:flex-row flex-col flex-wrap md:justify-end gap-5 md:gap-x-11 md:gap-y-5 max-w-[212px] md:max-w-none h-fit"
           >
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="mailto:info@airone-group.ae"
               target="_blank"
               rel="noopener noreferrer"
@@ -559,7 +559,7 @@
               info@airone-group.ae
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:+971549936988"
               target="_blank"
               rel="noopener noreferrer"
@@ -572,7 +572,7 @@
               +971 54 993 6988
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:042383533"
               target="_blank"
               rel="noopener noreferrer"
@@ -585,7 +585,7 @@
               (04) 238 35 33
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
               target="_blank"
               rel="noopener noreferrer"

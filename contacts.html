@@ -29,14 +29,14 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="assets/js/vendor/tw.js"></script>
   </head>
   <body>
     <!-- Bg Lights -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-1">
+    <div class="-z-1 fixed inset-0 overflow-hidden pointer-events-none">
       <div class="relative w-full h-full">
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 220px; height: 220px; right: 0; top: 200px"
         ></div>
       </div>
@@ -75,21 +75,21 @@
         <h3 class="mb-5 md:mb-7 font-medium text-[28px] md:text-[40px]">
           Contacts
         </h3>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7">
+        <div class="gap-6 md:gap-7 grid grid-cols-1 md:grid-cols-2">
           <picture>
             <source
               media="(min-width: 769px)"
               srcset="assets/img/banners/contacts.webp"
             />
             <img
-              class="w-full rounded-[12px]"
+              class="rounded-[12px] w-full"
               src="assets/img/banners/contacts-mobile.webp"
               alt=""
             />
           </picture>
           <div class="flex flex-col gap-5 md:gap-x-11 md:gap-y-5 w-full h-fit">
             <a
-              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[--accent] transition-all duration-300"
               href="mailto:info@airone-group.ae"
               target="_blank"
               rel="noopener noreferrer"
@@ -102,7 +102,7 @@
               info@airone-group.ae
             </a>
             <a
-              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[--accent] transition-all duration-300"
               href="tel:+971549936988"
               target="_blank"
               rel="noopener noreferrer"
@@ -115,7 +115,7 @@
               +971 54 993 6988
             </a>
             <a
-              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[--accent] transition-all duration-300"
               href="tel:042383533"
               target="_blank"
               rel="noopener noreferrer"
@@ -128,7 +128,7 @@
               (04) 238 35 33
             </a>
             <a
-              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 text-[16px] md:text-[20px] hover:text-[--accent] transition-all duration-300"
               href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
               target="_blank"
               rel="noopener noreferrer"
@@ -282,27 +282,27 @@
         >
           <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/"
               >Home
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/team.html"
               >Our Team
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/partners.html"
               >Partners
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/documents.html"
               >Documents
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/contacts.html"
               >Contacts
             </a>
@@ -311,7 +311,7 @@
             class="flex md:flex-row flex-col flex-wrap md:justify-end gap-5 md:gap-x-11 md:gap-y-5 max-w-[212px] md:max-w-none h-fit"
           >
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="mailto:info@airone-group.ae"
               target="_blank"
               rel="noopener noreferrer"
@@ -324,7 +324,7 @@
               info@airone-group.ae
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:+971549936988"
               target="_blank"
               rel="noopener noreferrer"
@@ -337,7 +337,7 @@
               +971 54 993 6988
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:042383533"
               target="_blank"
               rel="noopener noreferrer"
@@ -350,7 +350,7 @@
               (04) 238 35 33
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
               target="_blank"
               rel="noopener noreferrer"

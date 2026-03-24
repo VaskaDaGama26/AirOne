@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -24,19 +24,20 @@
     />
 
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/map.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="assets/js/vendor/tw.js"></script>
   </head>
   <body>
     <!-- Bg Lights -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-1">
+    <div class="-z-1 fixed inset-0 overflow-hidden pointer-events-none">
       <div class="relative w-full h-full">
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 250px; height: 250px; right: 0; top: 200px"
         ></div>
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 420px; height: 420px; left: 0px; top: 700px"
         ></div>
       </div>
@@ -73,17 +74,19 @@
           Dubai Real Estate Projects Directory
         </h1>
 
-        <div class="grid gap-4 md:gap-10">
+        <div id="map"></div>
+
+        <div class="gap-4 md:gap-10 grid">
           <div
-            class="grid md:grid-cols-2 gap-8 p-5 rounded-[16px] border-gradient-conic"
+            class="gap-8 grid md:grid-cols-2 p-5 border-gradient-conic rounded-[16px]"
           >
-            <div class="order-1 md:order-none flex flex-col items-start">
+            <div class="flex flex-col items-start order-1 md:order-none">
               <div class="flex flex-col gap-3 md:gap-6">
-                <h3 class="text-[24px] md:text-[32px] font-medium">
+                <h3 class="font-medium text-[24px] md:text-[32px]">
                   DAMAC Islands 2
                 </h3>
                 <p
-                  class="text-[14px] md:text-[20px] leading-relaxed line-clamp-3"
+                  class="text-[14px] md:text-[20px] line-clamp-3 leading-relaxed"
                 >
                   DAMAC Islands 2 is a large-scale villa community with an
                   island-inspired concept. The project is inspired by the
@@ -96,7 +99,7 @@
               </div>
 
               <a
-                class="w-full max-w-[360px] flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] text-[#000624] text-[16px] md:text-[24px] text-center"
+                class="flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] w-full max-w-[360px] text-[#000624] text-[16px] md:text-[24px] text-center"
                 href="/AirOne/communities/DamacIslands2.html"
               >
                 Show More
@@ -105,26 +108,30 @@
 
             <div class="relative h-[200px] md:h-full">
               <img
-                class="absolute inset-0 w-full h-full object-cover rounded-lg"
+                class="absolute inset-0 rounded-lg w-full h-full object-cover"
                 src="/AirOne/assets/img/communities/DamacIslands2.webp"
                 alt=""
               />
             </div>
           </div>
           <div
-            class="grid md:grid-cols-2 gap-8 p-5 rounded-[16px] border-gradient-conic"
+            class="gap-8 grid md:grid-cols-2 p-5 border-gradient-conic rounded-[16px]"
           >
             <div class="relative h-[200px] md:h-full">
               <img
-                class="absolute inset-0 w-full h-full object-cover rounded-lg"
+                class="absolute inset-0 rounded-lg w-full h-full object-cover"
                 src="/AirOne/assets/img/communities/EmaarTheValley.webp"
                 alt=""
               />
             </div>
-            <div class="order-1 md:order-none flex flex-col items-start">
+            <div class="flex flex-col items-start order-1 md:order-none">
               <div class="flex flex-col gap-3 md:gap-6">
-                <h3 class="text-[24px] md:text-[32px] font-medium">Emaar The Valley</h3>
-                <p class="text-[14px] md:text-[20px] leading-relaxed line-clamp-3">
+                <h3 class="font-medium text-[24px] md:text-[32px]">
+                  Emaar The Valley
+                </h3>
+                <p
+                  class="text-[14px] md:text-[20px] line-clamp-3 leading-relaxed"
+                >
                   The Valley is a large residential community by Emaar designed
                   for peaceful family living outside the city center. The
                   project combines modern architecture, expansive green spaces,
@@ -136,7 +143,7 @@
               </div>
 
               <a
-                class="w-full max-w-[360px] flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] text-[#000624] text-[16px] md:text-[24px] text-center"
+                class="flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] w-full max-w-[360px] text-[#000624] text-[16px] md:text-[24px] text-center"
                 href="/AirOne/communities/EmaarTheValley.html"
               >
                 Show More
@@ -144,12 +151,16 @@
             </div>
           </div>
           <div
-            class="grid md:grid-cols-2 gap-8 p-5 rounded-[16px] border-gradient-conic"
+            class="gap-8 grid md:grid-cols-2 p-5 border-gradient-conic rounded-[16px]"
           >
-            <div class="order-1 md:order-none flex flex-col items-start">
+            <div class="flex flex-col items-start order-1 md:order-none">
               <div class="flex flex-col gap-3 md:gap-6">
-                <h3 class="text-[24px] md:text-[32px] font-medium">Ohana by Jacob & Co</h3>
-                <p class="text-[14px] md:text-[20px] leading-relaxed line-clamp-3">
+                <h3 class="font-medium text-[24px] md:text-[32px]">
+                  Ohana by Jacob & Co
+                </h3>
+                <p
+                  class="text-[14px] md:text-[20px] line-clamp-3 leading-relaxed"
+                >
                   Ohana by Jacob & Co is an ultra-premium project of branded
                   residences created in collaboration with the luxury jewelry
                   house Jacob & Co. The project combines high-end architecture,
@@ -160,7 +171,7 @@
               </div>
 
               <a
-                class="w-full max-w-[360px] flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] text-[#000624] text-[16px] md:text-[24px] text-center"
+                class="flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] w-full max-w-[360px] text-[#000624] text-[16px] md:text-[24px] text-center"
                 href="/AirOne/communities/OhanabyJacob&Co.html"
               >
                 Show More
@@ -169,26 +180,30 @@
 
             <div class="relative h-[200px] md:h-full">
               <img
-                class="absolute inset-0 w-full h-full object-cover rounded-lg"
+                class="absolute inset-0 rounded-lg w-full h-full object-cover"
                 src="/AirOne/assets/img/communities/OhanabyJacob&Co.webp"
                 alt=""
               />
             </div>
           </div>
           <div
-            class="grid md:grid-cols-2 gap-8 p-5 rounded-[16px] border-gradient-conic"
+            class="gap-8 grid md:grid-cols-2 p-5 border-gradient-conic rounded-[16px]"
           >
             <div class="relative h-[200px] md:h-full">
               <img
-                class="absolute inset-0 w-full h-full object-cover rounded-lg"
+                class="absolute inset-0 rounded-lg w-full h-full object-cover"
                 src="/AirOne/assets/img/communities/DamacLagoons.webp"
                 alt=""
               />
             </div>
-            <div class="order-1 md:order-none flex flex-col items-start">
+            <div class="flex flex-col items-start order-1 md:order-none">
               <div class="flex flex-col gap-3 md:gap-6">
-                <h3 class="text-[24px] md:text-[32px] font-medium">DAMAC Lagoons</h3>
-                <p class="text-[14px] md:text-[20px] leading-relaxed line-clamp-3">
+                <h3 class="font-medium text-[24px] md:text-[32px]">
+                  DAMAC Lagoons
+                </h3>
+                <p
+                  class="text-[14px] md:text-[20px] line-clamp-3 leading-relaxed"
+                >
                   DAMAC Lagoons is a large residential community in Dubai with a
                   resort-style concept inspired by the Mediterranean lifestyle.
                   The project combines residential clusters, water features, and
@@ -200,7 +215,7 @@
               </div>
 
               <a
-                class="w-full max-w-[360px] flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] text-[#000624] text-[16px] md:text-[24px] text-center"
+                class="flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] w-full max-w-[360px] text-[#000624] text-[16px] md:text-[24px] text-center"
                 href="/AirOne/communities/DamacLagoons.html"
               >
                 Show More
@@ -208,14 +223,16 @@
             </div>
           </div>
           <div
-            class="grid md:grid-cols-2 gap-8 p-5 rounded-[16px] border-gradient-conic"
+            class="gap-8 grid md:grid-cols-2 p-5 border-gradient-conic rounded-[16px]"
           >
-            <div class="order-1 md:order-none flex flex-col items-start">
+            <div class="flex flex-col items-start order-1 md:order-none">
               <div class="flex flex-col gap-3 md:gap-6">
-                <h3 class="text-[24px] md:text-[32px] font-medium">
+                <h3 class="font-medium text-[24px] md:text-[32px]">
                   Binghatti Amberhall Villas (Dubailand)
                 </h3>
-                <p class="text-[14px] md:text-[20px] leading-relaxed line-clamp-3">
+                <p
+                  class="text-[14px] md:text-[20px] line-clamp-3 leading-relaxed"
+                >
                   This villa project by Binghatti in Dubailand combines the
                   developer’s signature architecture with the privacy of a gated
                   community. The residences are designed for family living and
@@ -226,7 +243,7 @@
               </div>
 
               <a
-                class="w-full max-w-[360px] flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] text-[#000624] text-[16px] md:text-[24px] text-center"
+                class="flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] w-full max-w-[360px] text-[#000624] text-[16px] md:text-[24px] text-center"
                 href="/AirOne/communities/BinghattiAmberhallVillas.html"
               >
                 Show More
@@ -235,26 +252,30 @@
 
             <div class="relative h-[200px] md:h-full">
               <img
-                class="absolute inset-0 w-full h-full object-cover rounded-lg"
+                class="absolute inset-0 rounded-lg w-full h-full object-cover"
                 src="/AirOne/assets/img/communities/BinghattiAmberhallVillas.webp"
                 alt=""
               />
             </div>
           </div>
           <div
-            class="grid md:grid-cols-2 gap-8 p-5 rounded-[16px] border-gradient-conic"
+            class="gap-8 grid md:grid-cols-2 p-5 border-gradient-conic rounded-[16px]"
           >
             <div class="relative h-[200px] md:h-full">
               <img
-                class="absolute inset-0 w-full h-full object-cover rounded-lg"
+                class="absolute inset-0 rounded-lg w-full h-full object-cover"
                 src="/AirOne/assets/img/communities/NadAlShebaGardens.webp"
                 alt=""
               />
             </div>
             <div class="flex flex-col items-start">
               <div class="flex flex-col gap-3 md:gap-6">
-                <h3 class="text-[24px] md:text-[32px] font-medium">Nad Al Sheba Gardens</h3>
-                <p class="text-[14px] md:text-[20px] leading-relaxed line-clamp-3">
+                <h3 class="font-medium text-[24px] md:text-[32px]">
+                  Nad Al Sheba Gardens
+                </h3>
+                <p
+                  class="text-[14px] md:text-[20px] line-clamp-3 leading-relaxed"
+                >
                   Nad Al Sheba Gardens is a modern gated community of villas and
                   townhouses by Meraas located close to Dubai’s central
                   districts. The project is designed for family living and
@@ -267,7 +288,7 @@
               </div>
 
               <a
-                class="w-full max-w-[360px] flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] text-[#000624] text-[16px] md:text-[24px] text-center"
+                class="flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] w-full max-w-[360px] text-[#000624] text-[16px] md:text-[24px] text-center"
                 href="/AirOne/communities/NadAlShebaGardens.html"
               >
                 Show More
@@ -275,14 +296,16 @@
             </div>
           </div>
           <div
-            class="grid md:grid-cols-2 gap-8 p-5 rounded-[16px] border-gradient-conic"
+            class="gap-8 grid md:grid-cols-2 p-5 border-gradient-conic rounded-[16px]"
           >
-            <div class="order-1 md:order-none flex flex-col items-start">
+            <div class="flex flex-col items-start order-1 md:order-none">
               <div class="flex flex-col gap-3 md:gap-6">
-                <h3 class="text-[24px] md:text-[32px] font-medium">
+                <h3 class="font-medium text-[24px] md:text-[32px]">
                   SHA Residences Emirates (SHA Wellness Villas)
                 </h3>
-                <p class="text-[14px] md:text-[20px] leading-relaxed line-clamp-3">
+                <p
+                  class="text-[14px] md:text-[20px] line-clamp-3 leading-relaxed"
+                >
                   SHA Residences Emirates is an exclusive wellness project on
                   the UAE coastline created in collaboration with the
                   international health brand SHA Wellness Clinic. The project
@@ -295,7 +318,7 @@
               </div>
 
               <a
-                class="w-full max-w-[360px] flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] text-[#000624] text-[16px] md:text-[24px] text-center"
+                class="flex justify-center items-center bg-gradient mt-5 md:mt-10 py-2 md:py-3 rounded-[8px] w-full max-w-[360px] text-[#000624] text-[16px] md:text-[24px] text-center"
                 href="/AirOne/communities/ShaResidencesEmirates.html"
               >
                 Show More
@@ -304,7 +327,7 @@
 
             <div class="relative h-[200px] md:h-full">
               <img
-                class="absolute inset-0 w-full h-full object-cover rounded-lg"
+                class="absolute inset-0 rounded-lg w-full h-full object-cover"
                 src="/AirOne/assets/img/communities/ShaResidencesEmirates.webp"
                 alt=""
               />
@@ -385,29 +408,32 @@
         <div
           class="flex justify-between md:items-center gap-10 mt-20 md:mt-2.5"
         >
-          <nav class="flex flex-col gap-3 md:gap-6" aria-label="Footer Navigation">
+          <nav
+            class="flex flex-col gap-3 md:gap-6"
+            aria-label="Footer Navigation"
+          >
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/"
               >Home
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/team.html"
               >Our Team
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/partners.html"
               >Partners
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/documents.html"
               >Documents
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/contacts.html"
               >Contacts
             </a>
@@ -416,7 +442,7 @@
             class="flex md:flex-row flex-col flex-wrap md:justify-end gap-5 md:gap-x-11 md:gap-y-5 max-w-[212px] md:max-w-none h-fit"
           >
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="mailto:info@airone-group.ae"
               target="_blank"
               rel="noopener noreferrer"
@@ -425,7 +451,7 @@
               info@airone-group.ae
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:+971549936988"
               target="_blank"
               rel="noopener noreferrer"
@@ -434,7 +460,7 @@
               +971 54 993 6988
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:042383533"
               target="_blank"
               rel="noopener noreferrer"
@@ -443,7 +469,7 @@
               (04) 238 35 33
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
               target="_blank"
               rel="noopener noreferrer"
@@ -514,5 +540,7 @@
     </section>
 
     <script src="assets/js/burger.js"></script>
+    <script src="assets/js/vendor/d3.js"></script>
+    <script src="assets/js/map/script.js" type="module"></script>
   </body>
 </html>

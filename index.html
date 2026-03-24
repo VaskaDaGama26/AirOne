@@ -26,18 +26,18 @@
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="stylesheet" href="assets/css/broker.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="assets/js/vendor/tw.js"></script>
   </head>
   <body>
     <!-- Bg Lights -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-1">
+    <div class="-z-1 fixed inset-0 overflow-hidden pointer-events-none">
       <div class="relative w-full h-full">
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 420px; height: 420px; left: 0px; top: 700px"
         ></div>
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 300px; height: 300px; right: 0px; top: 1200px"
         ></div>
       </div>
@@ -79,7 +79,7 @@
               srcset="assets/img/banners/banner.webp"
             />
             <img
-              class="relative rounded-[12px] w-full h-full object-cover object-bottom md:object-right banner nebo nebo--bl"
+              class="relative rounded-[12px] w-full h-full object-bottom object-cover md:object-right banner nebo nebo--bl"
               src="assets/img/banners/banner-mobile.webp"
               alt=""
             />
@@ -223,7 +223,7 @@
               class="relative rounded-[12px] w-[196px] md:w-[300px] lg:w-full h-[264px] md:h-[404px] overflow-hidden"
             >
               <div
-                class="broker-wrapper relative rounded-[12px] h-full w-full max-h-[400px] aspect-3/4 shrink-0"
+                class="relative rounded-[12px] w-full h-full max-h-[400px] aspect-3/4 broker-wrapper shrink-0"
               >
                 <picture>
                   <source
@@ -231,7 +231,7 @@
                     srcset="assets/img/team/desktop/Maxim Anischenko.png"
                   />
                   <img
-                    class="absolute inset-0 rounded-[12px] w-full h-full object-cover object-center"
+                    class="absolute inset-0 rounded-[12px] w-full h-full object-center object-cover"
                     src="assets/img/team/mobile/Maxim Anischenko.png"
                     alt=""
                   />
@@ -252,7 +252,7 @@
               class="relative rounded-[12px] w-[196px] md:w-[300px] lg:w-full h-[264px] md:h-[404px] overflow-hidden"
             >
               <div
-                class="broker-wrapper relative rounded-[12px] h-full w-full max-h-[400px] aspect-3/4 shrink-0"
+                class="relative rounded-[12px] w-full h-full max-h-[400px] aspect-3/4 broker-wrapper shrink-0"
               >
                 <picture>
                   <source
@@ -260,7 +260,7 @@
                     srcset="assets/img/team/desktop/Ekaterina Buniaeva Broker.png"
                   />
                   <img
-                    class="absolute inset-0 rounded-[12px] w-full h-full object-cover object-center"
+                    class="absolute inset-0 rounded-[12px] w-full h-full object-center object-cover"
                     src="assets/img/team/mobile/Ekaterina Buniaeva Broker.png"
                     alt=""
                   />
@@ -281,7 +281,7 @@
               class="relative rounded-[12px] w-[196px] md:w-[300px] lg:w-full h-[264px] md:h-[404px] overflow-hidden"
             >
               <div
-                class="broker-wrapper relative rounded-[12px] h-full w-full max-h-[400px] aspect-3/4 shrink-0"
+                class="relative rounded-[12px] w-full h-full max-h-[400px] aspect-3/4 broker-wrapper shrink-0"
               >
                 <picture>
                   <source
@@ -289,7 +289,7 @@
                     srcset="assets/img/team/desktop/Shahbaz Khalid Broker.png"
                   />
                   <img
-                    class="absolute inset-0 rounded-[12px] w-full h-full object-cover object-center"
+                    class="absolute inset-0 rounded-[12px] w-full h-full object-center object-cover"
                     src="assets/img/team/mobile/Shahbaz Khalid Broker.png"
                     alt=""
                   />
@@ -310,7 +310,7 @@
               class="relative rounded-[12px] w-[196px] md:w-[300px] lg:w-full h-[264px] md:h-[404px] overflow-hidden"
             >
               <div
-                class="broker-wrapper relative rounded-[12px] h-full w-full max-h-[400px] aspect-3/4 shrink-0"
+                class="relative rounded-[12px] w-full h-full max-h-[400px] aspect-3/4 broker-wrapper shrink-0"
               >
                 <picture>
                   <source
@@ -318,7 +318,7 @@
                     srcset="assets/img/team/desktop/Konstantin Siegel Broker.png"
                   />
                   <img
-                    class="absolute inset-0 rounded-[12px] w-full h-full object-cover object-center"
+                    class="absolute inset-0 rounded-[12px] w-full h-full object-center object-cover"
                     src="assets/img/team/mobile/Konstantin Siegel Broker.png"
                     alt=""
                   />
@@ -500,27 +500,27 @@
         >
           <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/"
               >Home
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/team.html"
               >Our Team
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/partners.html"
               >Partners
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/documents.html"
               >Documents
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/contacts.html"
               >Contacts
             </a>
@@ -529,7 +529,7 @@
             class="flex md:flex-row flex-col flex-wrap md:justify-end gap-5 md:gap-x-11 md:gap-y-5 max-w-[212px] md:max-w-none h-fit"
           >
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="mailto:info@airone-group.ae"
               target="_blank"
               rel="noopener noreferrer"
@@ -538,7 +538,7 @@
               info@airone-group.ae
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:+971549936988"
               target="_blank"
               rel="noopener noreferrer"
@@ -547,7 +547,7 @@
               +971 54 993 6988
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:042383533"
               target="_blank"
               rel="noopener noreferrer"
@@ -556,7 +556,7 @@
               (04) 238 35 33
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
               target="_blank"
               rel="noopener noreferrer"

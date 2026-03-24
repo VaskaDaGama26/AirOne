@@ -6,9 +6,10 @@
 :root {
   --primary: #00041a;
   --secondary: #1f2336;
-  --gradient: rgba(244, 190, 178, 1) 0%, rgba(249, 198, 186, 1) 50%,
-    rgba(255, 220, 212, 1) 100%;
-  --borderGradient: rgb(0, 6, 36), rgba(255, 255, 255, 0.333);
+  --accent: #f4beb2;
+  --white: #ffffff;
+  --gradient: var(--accent) 0%, #f9c6ba 50%, #ffdcd4 100%;
+  --borderGradient: rgb(0, 6, 36), #ffffff55;
   --borderGradientReverse: #000624, #000624, #f5c5b9;
 }
 
@@ -18,7 +19,7 @@
 
 html {
   background-color: var(--primary);
-  color: #ffffff;
+  color: var(--white);
   height: 100dvh !important;
   line-height: 1.2 !important;
 }
@@ -36,7 +37,7 @@ main {
   content: "";
   width: 250px;
   height: 250px;
-  background-color: #f4beb2;
+  background-color: --accent;
   opacity: 0.3;
   border-radius: 999px;
   position: absolute;

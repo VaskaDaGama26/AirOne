@@ -29,18 +29,18 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
 
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="assets/js/vendor/tw.js"></script>
   </head>
   <body>
     <!-- Bg Lights -->
-    <div class="fixed inset-0 pointer-events-none overflow-hidden -z-1">
+    <div class="-z-1 fixed inset-0 overflow-hidden pointer-events-none">
       <div class="relative w-full h-full">
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 250px; height: 250px; right: 0; top: 200px"
         ></div>
         <div
-          class="blur-circle absolute"
+          class="absolute blur-circle"
           style="width: 420px; height: 420px; left: 0px; top: 700px"
         ></div>
       </div>
@@ -265,27 +265,27 @@
         >
           <nav class="flex flex-col gap-6" aria-label="Footer Navigation">
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/"
               >Home
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/team.html"
               >Our Team
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/partners.html"
               >Partners
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/documents.html"
               >Documents
             </a>
             <a
-              class="hover:text-[#f4beb2] transition-all duration-300"
+              class="hover:text-[--accent] transition-all duration-300"
               href="/AirOne/contacts.html"
               >Contacts
             </a>
@@ -294,7 +294,7 @@
             class="flex md:flex-row flex-col flex-wrap md:justify-end gap-5 md:gap-x-11 md:gap-y-5 max-w-[212px] md:max-w-none h-fit"
           >
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="mailto:info@airone-group.ae"
               target="_blank"
               rel="noopener noreferrer"
@@ -307,7 +307,7 @@
               info@airone-group.ae
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:+971549936988"
               target="_blank"
               rel="noopener noreferrer"
@@ -320,7 +320,7 @@
               +971 54 993 6988
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="tel:042383533"
               target="_blank"
               rel="noopener noreferrer"
@@ -333,7 +333,7 @@
               (04) 238 35 33
             </a>
             <a
-              class="flex items-center gap-3 hover:text-[#f4beb2] transition-all duration-300"
+              class="flex items-center gap-3 hover:text-[--accent] transition-all duration-300"
               href="https://maps.app.goo.gl/Rf4CJDCWwioANygg9"
               target="_blank"
               rel="noopener noreferrer"
